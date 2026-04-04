@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_destination_form" model="ir.ui.view">
+        <field name="name">travel_pro_sahara.destination.form</field>
+        <field name="model">travel_pro_sahara.destination</field>
+        <field name="arch" type="xml">
+            <form string="Destination">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="ville" class="oe_edit_only" string="Ville de Destination"/>
+                        <h1>
+                            <field name="ville" placeholder="Ex: Hammamet, Djerba..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group string="Localisation">
+                            <field name="pays"/>
+                            <field name="adresse" placeholder="Adresse complète..."/>
+                            <field name="code_postal"/>
+                        </group>
+                        <group string="Configuration">
+                            <field name="voyage_id" readonly="1"/>
+                            <field name="sequence"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

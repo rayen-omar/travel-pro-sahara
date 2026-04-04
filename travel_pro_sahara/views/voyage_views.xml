@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_voyage" model="ir.actions.act_window">
+        <field name="name">الرحلات</field>
+        <field name="res_model">travel_pro_sahara.voyage</field>
+        <field name="view_mode">kanban,list,form</field>
+    </record>
+
+    <!-- KANBAN VIEW -->
+    <record id="view_voyage_kanban" model="ir.ui.view">
+        <field name="name">travel_pro_sahara.voyage.kanban</field>
+        <field name="model">travel_pro_sahara.voyage</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile" sample="1">
+                <field name="name"/>
+                <field name="reference"/>
+                <field name="type_voyage"/>
+                <field name="lieu_depart"/>
+                <field name="date_debut"/>
+                <field name="photo_voyage"/>
+                <field name="state"/>
+                <field name="prix_adulte"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click o_kanban_record_has_image_fill">
+                            <t t-if="record.photo_voyage.raw_value">
+                                <div class="o_kanban_image_fill_left d-none d-md-block"
+                                     t-attf-style="background-image:url('#{kanban_image('travel_pro_sahara.voyage', 'photo_voyage', record.id.raw_value)}')"/>
+                            </t>
+                            
+                            <div class="oe_kanban_details">
+                                <div class="o_kanban_record_top">
+                                    <div class="o_kanban_record_headings">
+                                        <strong class="o_kanban_record_title">
+                                            <field name="name"/>
+                                        </strong>
+                                        <span class="o_kanban_record_subtitle text-muted d-block"> <field name="reference"/> </span>
+                                    </div>
+                                    <div class="o_dropdown_kanban dropdown">
+                                        <a role="button" class="dropdown-toggle o-no-caret btn" data-bs-toggle="dropdown" href="#" aria-label="Dropdown menu" title="Dropdown menu">
+                                            <span class="fa fa-ellipsis-v"/>
+                                        </a>
+                                        <div class="dropdown-menu" role="menu">
+                                            <a role="menuitem" type="edit" class="dropdown-item">تعديل</a>
+                                            <a role="menuitem" type="delete" class="dropdown-item">حذف</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o_kanban_record_body mt-2">
+                                    <div><i class="fa fa-calendar me-1"/> <field name="date_debut"/></div>
+                                    <div t-if="record.lieu_depart.raw_value" class="mt-1"><i class="fa fa-map-marker me-1"/> <field name="lieu_depart"/></div>
+                                    <div class="mt-1"><span class="badge text-bg-info"><field name="type_voyage"/></span></div>
+                                </div>
+                                <div class="o_kanban_record_bottom mt-2">
+                                    <div class="oe_kanban_bottom_left">
+                                        <field name="state" widget="label_selection" options="{'classes': {'brouillon': 'secondary', 'confirme': 'success', 'complet': 'warning', 'annule': 'danger'}}"/>
+                                    </div>
+                                    <div class="oe_kanban_bottom_right">
+                                        <strong class="text-success"><field name="prix_adulte" widget="monetary"/></strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- LIST VIEW -->
+    <record id="view_voyage_list" model="ir.ui.view">
+        <field name="name">travel_pro_sahara.voyage.list</field>
+        <field name="model">travel_pro_sahara.voyage</field>
+        <field name="arch" type="xml">
+            <list string="الرحلات" default_order="date_debut desc" decoration-info="state == 'brouillon'" decoration-muted="state == 'annule'">
+                <field name="reference" string="المرجع"/>
+                <field name="name" string="اسم الرحلة"/>
+                <field name="type_voyage" string="النوع"/>
+                <field name="lieu_depart" string="مكان الانطلاق"/>
+                <field name="date_debut" string="تاريخ البدء"/>
+                <field name="date_fin" string="تاريخ الانتهاء"/>
+                <field name="prix_adulte" widget="monetary" string="سعر البالغ"/>
+                <field name="state" widget="badge" string="الحالة" decoration-info="state == 'brouillon'" decoration-success="state == 'confirme'" decoration-warning="state == 'complet'" decoration-danger="state == 'annule'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_voyage_form" model="ir.ui.view">
+        <field name="name">travel_pro_sahara.voyage.form</field>
+        <field name="model">travel_pro_sahara.voyage</field>
+        <field name="arch" type="xml">
+            <form string="الرحلة">
+                <header>
+                    <button name="action_confirmer" type="object" string="تأكيد" class="btn-primary" invisible="state != 'brouillon'"/>
+                    <button name="action_complet" type="object" string="تحديد كمكتمل" class="btn-primary" invisible="state != 'confirme'"/>
+                    <button name="action_annuler" type="object" string="إلغاء" invisible="state not in ('brouillon', 'confirme')"/>
+                    <button name="action_brouillon" type="object" string="إرجاع إلى مسودة" invisible="state == 'brouillon'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="brouillon,confirme,complet"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_reservations" type="object" class="oe_stat_button" icon="fa-book">
+                            <div class="o_stat_info">
+                                <span class="o_stat_value"><field name="reservation_count"/></span>
+                                <span class="o_stat_text">الحجوزات</span>
+                            </div>
+                        </button>
+                    </div>
+                    <widget name="web_ribbon" title="مكتمل" bg_color="text-bg-warning" invisible="state != 'complet'"/>
+                    <widget name="web_ribbon" title="ملغى" bg_color="text-bg-danger" invisible="state != 'annule'"/>
+                    
+                    <field name="photo_voyage" widget="image" class="oe_avatar" options="{'size': [120, 120]}"/>
+                    <div class="oe_title">
+                        <label for="name" string="اسم الرحلة" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name" placeholder="مثال: سفاري كينيا 10 أيام..."/>
+                        </h1>
+                        <div class="o_row">
+                            <strong>المرجع: </strong>
+                            <field name="reference" readonly="1" class="oe_inline"/>
+                        </div>
+                    </div>
+                    <group>
+                        <group string="معلومات عامة">
+                            <field name="type_voyage" string="نوع الرحلة" widget="radio" options="{'horizontal': true}"/>
+                            <field name="lieu_depart" string="مكان الانطلاق"/>
+                            <label for="date_debut" string="الفترة"/>
+                            <div class="o_row">
+                                <field name="date_debut"/>
+                                <span class="mx-2">إلى</span>
+                                <field name="date_fin"/>
+                            </div>
+                        </group>
+                        <group string="التسعير">
+                            <field name="prix_adulte" string="سعر البالغ" widget="monetary"/>
+                            <field name="prix_enfant" string="سعر الطفل" widget="monetary"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="الوجهات" name="destinations">
+                            <field name="destination_ids">
+                                <list editable="bottom" create="1" delete="1">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="ville" string="المدينة"/>
+                                    <field name="pays" string="الدولة"/>
+                                    <field name="adresse" string="العنوان"/>
+                                    <field name="code_postal" string="الرمز البريدي"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="ملاحظات" name="notes">
+                            <field name="note" string="تعليقات" placeholder="ملاحظات حول هذه الرحلة..."/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

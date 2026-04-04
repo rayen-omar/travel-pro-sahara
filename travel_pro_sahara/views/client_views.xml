@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_client" model="ir.actions.act_window">
+        <field name="name">الزبائن</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,list,form</field>
+        <field name="domain">[('customer_rank', '>', 0), ('supplier_rank', '=', 0)]</field>
+        <field name="context">{'default_is_company': False, 'default_customer_rank': 1, 'default_supplier_rank': 0}</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            أضف أول زبون لك!
+          </p>
+        </field>
+    </record>
+
+    <record id="view_client_kanban" model="ir.ui.view">
+        <field name="name">res.partner.kanban.travel</field>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile" sample="1">
+                <field name="name"/>
+                <field name="email"/>
+                <field name="mobile"/>
+                <field name="image_1920"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click o_kanban_record_has_image_fill">
+                            <t t-if="record.image_1920.raw_value">
+                                <div class="o_kanban_image_fill_left d-none d-md-block"
+                                     t-attf-style="background-image:url('#{kanban_image('res.partner', 'image_1920', record.id.raw_value)}')"/>
+                            </t>
+                            <div class="oe_kanban_details">
+                                <strong class="o_kanban_record_title"><field name="name"/></strong>
+                                <div class="o_kanban_record_body mt-2">
+                                    <div t-if="record.email.raw_value"><i class="fa fa-envelope me-1"/> <field name="email"/></div>
+                                    <div t-if="record.mobile.raw_value" class="mt-1"><i class="fa fa-phone me-1"/> <field name="mobile"/></div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="view_client_tree" model="ir.ui.view">
+        <field name="name">res.partner.list.travel</field>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <list string="قائمة الزبائن" default_order="name">
+                <field name="image_128" widget="image" options="{'size': [30, 30]}" string="الصورة"/>
+                <field name="name" string="الاسم الكامل"/>
+                <field name="email" string="البريد الإلكتروني"/>
+                <field name="mobile" string="الهاتف"/>
+                <field name="numero_cin" string="رقم بطاقة التعريف"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_client_form" model="ir.ui.view">
+        <field name="name">res.partner.form.travel</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='company_type']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='name']" position="attributes">
+                <attribute name="placeholder">اسم الزبون...</attribute>
+            </xpath>
+
+            <xpath expr="//sheet/group[1]/group[1]" position="attributes">
+                <attribute name="string">معلومات الهوية</attribute>
+            </xpath>
+            <xpath expr="//span[@name='address_name']" position="before">
+                <field name="nom" string="اللقب" placeholder="اللقب..."/>
+                <field name="prenom" string="الاسم" placeholder="الاسم..."/>
+            </xpath>
+            <xpath expr="//span[@name='address_name']" position="replace">
+                <label for="street" string="العنوان" class="o_form_label o_td_label"/>
+            </xpath>
+
+            <xpath expr="//sheet/group[1]/group[2]" position="attributes">
+                <attribute name="string">وثائق الهوية</attribute>
+            </xpath>
+            <xpath expr="//field[@name='function']" position="before">
+                <field name="numero_cin" string="رقم بطاقة التعريف"/>
+                <field name="numero_passport" string="رقم جواز السفر"/>
+            </xpath>
+
+            <xpath expr="//page[@name='contact_addresses']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//group[@name='purchase']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//group[@name='inventory']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//group[@name='point_of_sale']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            
+            <xpath expr="//field[@name='ref']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='industry_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='website']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='property_payment_term_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='category_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//page[@name='sales_purchases']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='mobile']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='email']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='lang']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='vat']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+    <!-- Héritage pour masquer le bouton Lots/Série (Stock) -->
+    <record id="view_partner_stock_form_inherit_travel" model="ir.ui.view">
+        <field name="name">res.partner.stock.form.travel</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="stock.view_partner_stock_warnings_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_view_stock_lots']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Héritage pour masquer le bouton Taux de Livraison -->
+    <record id="res_partner_view_purchase_buttons_inherit_travel" model="ir.ui.view">
+        <field name="name">res.partner.view.purchase.buttons.travel</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="purchase_stock.res_partner_view_purchase_buttons_inherit"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[.//span[text()='On-time Rate'] or @icon='fa-truck']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+    <!-- Héritage pour masquer le groupe Automatisation de Facturation (Compta) -->
+    <record id="view_partner_account_form_inherit_travel" model="ir.ui.view">
+        <field name="name">res.partner.account.form.travel</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="account.view_partner_property_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='accounting_automation']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

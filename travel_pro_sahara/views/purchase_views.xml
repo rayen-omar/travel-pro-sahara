@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Action personnalisée pour les Fournisseurs -->
+    <record id="action_vendor_travel" model="ir.actions.act_window">
+        <field name="name">الموردين</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,list,form</field>
+        <field name="domain">[('supplier_rank', '>', 0), ('customer_rank', '=', 0)]</field>
+        <field name="context">{'default_is_company': True, 'default_supplier_rank': 1, 'default_customer_rank': 0}</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            أضف أول مورد لك!
+          </p>
+        </field>
+    </record>
+
+    <!-- Menu principal Achat -->
+    <menuitem id="menu_purchase_root"
+              name="المشتريات"
+              parent="menu_travelprosaara_root"
+              sequence="30"/>
+
+    <!-- Liste des menus directs sous Achats -->
+    <menuitem id="menu_purchase_order_bc"
+              name="طلبات الشراء"
+              parent="menu_purchase_root"
+              action="purchase.purchase_form_action"
+              sequence="10"/>
+
+    <menuitem id="menu_purchase_vendor"
+              name="الموردين"
+              parent="menu_purchase_root"
+              action="action_vendor_travel"
+              sequence="20"/>
+
+    <menuitem id="menu_purchase_vendor_bill"
+              name="فواتير الموردين"
+              parent="menu_purchase_root"
+              action="account.action_move_in_invoice_type"
+              sequence="30"/>
+
+    <menuitem id="menu_purchase_receipt"
+              name="وصولات الاستلام"
+              parent="menu_purchase_root"
+              action="stock.action_picking_tree_all"
+              sequence="40"/>
+
+    <menuitem id="menu_purchase_product"
+              name="المنتجات"
+              parent="menu_purchase_root"
+              action="product.product_template_action"
+              sequence="50"/>
+
+    <menuitem id="menu_purchase_category"
+              name="الفئات"
+              parent="menu_purchase_root"
+              action="product.product_category_action_form"
+              sequence="60"/>
+</odoo>

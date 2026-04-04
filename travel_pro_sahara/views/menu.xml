@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Menu Parent Clients -->
+    <menuitem id="menu_client_root" name="الزبائن" parent="menu_travelprosaara_root" sequence="10"/>
+
+    <!-- Sous-menus Clients -->
+    <menuitem id="menu_client" 
+              name="قائمة الزبائن" 
+              parent="menu_client_root" 
+              action="action_client" 
+              sequence="10"/>
+
+    <menuitem id="menu_quotation" 
+              name="عروض أسعار" 
+              parent="menu_client_root" 
+              action="action_quotations_travel_pro" 
+              sequence="20"/>
+
+    <menuitem id="menu_sale_order" 
+              name="أوامر البيع" 
+              parent="menu_client_root" 
+              action="action_orders_travel_pro" 
+              sequence="30"/>
+
+    <!-- Ajout des Factures Client dans le menu Client -->
+    <menuitem id="menu_customer_invoices_client" 
+              name="فواتير الزبائن" 
+              parent="menu_client_root" 
+              action="account.action_move_out_invoice_type" 
+              sequence="40"/>
+
+    <!-- Menu Comptabilité -->
+    <menuitem id="menu_accounting_root" name="المحاسبة" parent="menu_travelprosaara_root" sequence="80"/>
+
+    <menuitem id="menu_customer_invoices" 
+              name="فواتير الزبائن" 
+              parent="menu_accounting_root" 
+              action="account.action_move_out_invoice_type" 
+              sequence="10"/>
+
+    <menuitem id="menu_vendor_bills" 
+              name="فواتير الموردين" 
+              parent="menu_accounting_root" 
+              action="account.action_move_in_invoice_type" 
+              sequence="20"/>
+
+    <menuitem id="menu_bank_accounts" 
+              name="الحسابات البنكية" 
+              parent="menu_accounting_root" 
+              action="account.action_new_bank_setting" 
+              sequence="30"/>
+
+    <menuitem id="menu_currency" 
+              name="العملات" 
+              parent="menu_accounting_root" 
+              action="base.action_currency_form" 
+              sequence="40"/>
+
+    <menuitem id="menu_journals" 
+              name="دفاتر اليومية" 
+              parent="menu_accounting_root" 
+              action="account.action_account_journal_form" 
+              sequence="50"/>
+
+    <menuitem id="menu_voyage" name="الرحلات" parent="menu_travelprosaara_root" action="action_voyage" sequence="20"/>
+    <menuitem id="menu_reservation" name="الحجوزات" parent="menu_travelprosaara_root" action="action_reservation" sequence="25"/>
+    
+    <menuitem id="menu_statistic" name="لوحة التحكم" parent="menu_travelprosaara_root" action="action_statistic" sequence="100"/>
+    
+    <menuitem id="menu_guide" name="دليل المستخدم" parent="menu_travelprosaara_root" action="action_travel_pro_guide_v2" sequence="1"/>
+
+</odoo>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_guide_form" model="ir.ui.view">
+        <field name="name">travel_pro_sahara.guide.form</field>
+        <field name="model">travel_pro_sahara.guide</field>
+        <field name="arch" type="xml">
+            <form string="دليل المستخدم الاحترافي" create="0" edit="0" delete="0">
+                <sheet>
+                    <style>
+                        /* Design Système Travel Pro */
+                        .tp_guide_wrapper {
+                            font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+                            direction: rtl;
+                        }
+                        .tp_header {
+                            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/web/static/img/placeholder.png'); /* On peut mettre une image ici */
+                            background-color: #1a237e;
+                            background-size: cover;
+                            color: white;
+                            padding: 60px 20px;
+                            border-radius: 20px;
+                            text-align: center;
+                            margin-bottom: 40px;
+                            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                        }
+                        .tp_process_title {
+                            font-size: 2.2em;
+                            font-weight: 900;
+                            color: #1a237e;
+                            text-align: center;
+                            margin-bottom: 40px;
+                            border-bottom: 3px solid #ffd600;
+                            display: table;
+                            margin-right: auto;
+                            margin-left: auto;
+                            padding-bottom: 10px;
+                        }
+                        .tp_grid {
+                            display: grid;
+                            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                            gap: 30px;
+                            padding: 10px;
+                        }
+                        .tp_card {
+                            background: #ffffff;
+                            border-radius: 15px;
+                            padding: 30px;
+                            border-right: 8px solid #3f51b5;
+                            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+                            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                            display: flex;
+                            gap: 20px;
+                        }
+                        .tp_card:hover {
+                            transform: translateY(-10px);
+                            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+                            border-right-color: #ffd600;
+                        }
+                        .tp_icon_circle {
+                            background: #e8eaf6;
+                            color: #1a237e;
+                            width: 60px;
+                            height: 60px;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 24px;
+                            flex-shrink: 0;
+                        }
+                        .tp_card_body h3 {
+                            color: #1a237e;
+                            font-weight: 800;
+                            margin: 0 0 10px 0;
+                            font-size: 1.4em;
+                        }
+                        .tp_card_body p {
+                            color: #546e7a;
+                            line-height: 1.6;
+                            margin: 0;
+                            font-size: 1.05em;
+                        }
+                        .tp_footer_tip {
+                            background: #fff9c4;
+                            border-right: 6px solid #fbc02d;
+                            padding: 25px;
+                            border-radius: 15px;
+                            margin-top: 50px;
+                            display: flex;
+                            align-items: center;
+                            gap: 20px;
+                        }
+                    </style>
+
+                    <div class="tp_guide_wrapper">
+                        <!-- En-tête -->
+                        <div class="tp_header">
+                            <h1 style="font-size: 3.5em; font-weight: 900; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">TRAVEL PRO DASHBOARD</h1>
+                            <p style="font-size: 1.5em; opacity: 0.9;">نظامكم الذكي لإدارة الرحلات والتحصيل المالي بكل احترافية</p>
+                        </div>
+
+                        <h2 class="tp_process_title">دورة العمل (Business Workflow)</h2>
+
+                        <div class="tp_grid">
+                            <!-- Step 1 -->
+                            <div class="tp_card">
+                                <div class="tp_icon_circle"><i class="fa fa-user-plus"/></div>
+                                <div class="tp_card_body">
+                                    <h3>١. إدارة الزبائن</h3>
+                                    <p>ابدأ بتسجيل الملف الشخصي للزبون (Nom, Prénom, CIN). هذا سيسمح لك بتوليد قائمة الركاب آلياً في الحجوزات القادمة.</p>
+                                </div>
+                            </div>
+
+                            <!-- Step 2 -->
+                            <div class="tp_card" style="border-right-color: #5c6bc0;">
+                                <div class="tp_icon_circle"><i class="fa fa-map"/></div>
+                                <div class="tp_card_body">
+                                    <h3>٢. تصميم البرنامج</h3>
+                                    <p>أنشئ "رحلة" جديدة (Voyage). حدد خط السير اليومي والأسعار الأساسية. الرحلة تعمل كقالب (Template) لجميع حجوزاتك.</p>
+                                </div>
+                            </div>
+
+                            <!-- Step 3 -->
+                            <div class="tp_card" style="border-right-color: #3949ab;">
+                                <div class="tp_icon_circle"><i class="fa fa-calendar-check-o"/></div>
+                                <div class="tp_card_body">
+                                    <h3>٣. محرك الحجوزات</h3>
+                                    <p>اربط الزبون بالرحلة. هنا يمكنك تخصيص كل شيء: (الفنادق، النقل، المعدات). سيقوم النظام بحساب السعر الإجمالي تلقائياً.</p>
+                                </div>
+                            </div>
+
+                            <!-- Step 4 -->
+                            <div class="tp_card" style="border-right-color: #283593;">
+                                <div class="tp_icon_circle"><i class="fa fa-file-text-o"/></div>
+                                <div class="tp_card_body">
+                                    <h3>٤. الفوترة الآلية</h3>
+                                    <p>بضغطة زر واحدة، قم بتوليد عرض سعر (Quotation) أو فاتورة. يتم ترحيل البيانات المالية مباشرة إلى قسم المحاسبة.</p>
+                                </div>
+                            </div>
+
+                            <!-- Step 5 -->
+                            <div class="tp_card" style="border-right-color: #1a237e;">
+                                <div class="tp_icon_circle"><i class="fa fa-dashboard"/></div>
+                                <div class="tp_card_body">
+                                    <h3>٥. الشفافية المالية</h3>
+                                    <p>راقب التحصيلات عبر "الصندوق العام". قارن بين المبالغ المستلمة والمتبقية في لوحة التحكم التفاعلية.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tip -->
+                        <div class="tp_footer_tip">
+                            <i class="fa fa-lightbulb-o" style="font-size: 2.5em; color: #fbc02d;"/>
+                            <div>
+                                <h4 style="margin: 0 0 5px 0; font-weight: 800;">تنبيه الأداء:</h4>
+                                <p style="margin: 0; color: #5d4037;">دائماً ابدأ بتأكيد الحجز (Confirmer) قبل إنشاء الفاتورة لضمان حجز المقاعد في الرحلة بشكل صحيح.</p>
+                            </div>
+                        </div>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

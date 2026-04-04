@@ -1,0 +1,163 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Travel Pro Sahara\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2024-04-03 22:55+0000\n"
+"Last-Translator: Sahara Travel\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=0; n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_travelprosaara_root
+msgid "Travel Pro"
+msgstr "Travel Pro"
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_client
+msgid "Clients"
+msgstr "الزبائن"
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_voyage
+msgid "Voyages"
+msgstr "الرحلات"
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_reservation
+msgid "Réservations"
+msgstr "الحجوزات"
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_logistique_root
+msgid "Logistique"
+msgstr "اللوجستيات"
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_voyage_jour
+msgid "Journal par Jour"
+msgstr "اليومية"
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_voyage_transport
+msgid "Transports"
+msgstr "النقل"
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_voyage_hotel
+msgid "Hôtels"
+msgstr "الفنادق"
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_voyage_restauration
+msgid "Restauration"
+msgstr "المطاعم"
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_voyage_guide
+msgid "Guides"
+msgstr "المرشدين"
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_voyage_equipement
+msgid "Équipements"
+msgstr "المعدات"
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_purchase_root
+msgid "Achats"
+msgstr "المشتريات"
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_purchase_order_bc
+msgid "Bons de Commande (BC)"
+msgstr "طلبات الشراء"
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_purchase_vendor
+msgid "Fournisseurs"
+msgstr "الموردين"
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_purchase_vendor_bill
+msgid "Factures Fournisseurs"
+msgstr "فواتير الموردين"
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_purchase_receipt
+msgid "Bons de Réception"
+msgstr "وصولات الاستلام"
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_purchase_product
+msgid "Produits"
+msgstr "المنتجات"
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_purchase_category
+msgid "Catégories"
+msgstr "الفئات"
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_statistic
+msgid "Tableau de Bord"
+msgstr "لوحة التحكم"
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_caisse
+msgid "Caisse"
+msgstr "الصندوق"
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_guide
+msgid "Guide"
+msgstr "دليل المستخدم"
+
+# --- TRADUCTIONS DES CHAMPS (Fichier ar.po) ---
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_res_partner__nom
+msgid "Nom"
+msgstr "اللقب"
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_res_partner__prenom
+msgid "Prénom"
+msgstr "الاسم الأول"
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_res_partner__numero_cin
+msgid "Numéro CIN"
+msgstr "رقم بطاقة التعريف"
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_res_partner__numero_passport
+msgid "Numéro passeport"
+msgstr "رقم جواز السفر"
+
+# TRADUCTIONS DES BOUTONS ET LABELS DE VUES
+#. module: travel_pro_sahara
+msgid "Marquer comme Complet"
+msgstr "تحديد كمكتمل"
+
+#. module: travel_pro_sahara
+msgid "Annuler"
+msgstr "إلغاء"
+
+#. module: travel_pro_sahara
+msgid "Remettre en brouillon"
+msgstr "إرجاع إلى مسودة"
+
+#. module: travel_pro_sahara
+msgid "Confirmer"
+msgstr "تأكيد"
+
+#. module: travel_pro_sahara
+msgid "INFORMATIONS GÉNÉRALES"
+msgstr "معلومات عامة"
+
+#. module: travel_pro_sahara
+msgid "TARIFICATION"
+msgstr "التسعير"

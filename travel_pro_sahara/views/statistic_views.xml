@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_statistic" model="ir.actions.act_window">
+        <field name="name">لوحة التحكم</field>
+        <field name="res_model">travel_pro_sahara.statistic</field>
+        <field name="view_mode">form</field>
+        <field name="res_id" ref="travel_pro_sahara.statistic_main"/>
+        <field name="target">current</field>
+    </record>
+
+    <record id="view_statistic_form" model="ir.ui.view">
+        <field name="name">travel_pro_sahara.statistic.form</field>
+        <field name="model">travel_pro_sahara.statistic</field>
+        <field name="arch" type="xml">
+            <form string="لوحة التحكم" create="0" delete="0">
+                <sheet>
+                    <style>
+                        .dashboard_container {
+                            padding: 20px;
+                            background-color: #f0f2f5;
+                            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                            direction: rtl; /* Pour l'arabe */
+                        }
+                        .header_banner {
+                            background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+                            color: white;
+                            padding: 40px;
+                            border-radius: 20px;
+                            margin-bottom: 35px;
+                            text-align: center;
+                            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+                            position: relative;
+                            overflow: hidden;
+                        }
+                        .header_banner::after {
+                            content: "";
+                            position: absolute;
+                            top: -50%;
+                            left: -50%;
+                            width: 200%;
+                            height: 200%;
+                            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+                        }
+                        .stat_cards_row {
+                            display: flex;
+                            gap: 25px;
+                            margin-bottom: 35px;
+                            flex-wrap: wrap;
+                        }
+                        .stat_card {
+                            flex: 1;
+                            min-width: 260px;
+                            background: white;
+                            border-radius: 18px;
+                            padding: 25px;
+                            display: flex;
+                            align-items: center;
+                            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+                            transition: all 0.3s ease;
+                            cursor: pointer;
+                            border-right: 6px solid #1a237e;
+                        }
+                        .stat_card:hover {
+                            transform: translateY(-8px);
+                            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+                        }
+                        .card_icon {
+                            font-size: 3em;
+                            margin-left: 20px;
+                            opacity: 0.9;
+                            width: 60px;
+                            display: flex;
+                            justify-content: center;
+                        }
+                        .card_content {
+                            display: flex;
+                            flex-direction: column;
+                            text-align: right;
+                        }
+                        .card_value {
+                            font-size: 2.2em;
+                            font-weight: 800;
+                            color: #1e293b;
+                            line-height: 1.2;
+                        }
+                        .card_label {
+                            color: #64748b;
+                            text-transform: uppercase;
+                            font-size: 0.95em;
+                            font-weight: 700;
+                            margin-bottom: 5px;
+                        }
+                        .finance_row {
+                            background: white;
+                            padding: 30px;
+                            border-radius: 20px;
+                            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+                            margin-bottom: 35px;
+                        }
+                        .finance_title {
+                            font-size: 1.5em;
+                            font-weight: 700;
+                            color: #1e293b;
+                            margin-bottom: 25px;
+                            border-right: 5px solid #2ecc71;
+                            padding-right: 15px;
+                        }
+                        .finance_grid {
+                            display: grid;
+                            grid-template-columns: repeat(3, 1fr);
+                            gap: 20px;
+                        }
+                        .finance_item {
+                            padding: 20px;
+                            border-radius: 12px;
+                            text-align: center;
+                        }
+                        .bg_blue { background-color: #e3f2fd; color: #1565c0; }
+                        .bg_green { background-color: #e8f5e9; color: #2e7d32; }
+                        .bg_red { background-color: #ffebee; color: #c62828; }
+                        
+                        /* Couleurs spécifiques bordures */
+                        .card_blue { border-right-color: #3b82f6; }
+                        .card_green { border-right-color: #10b981; }
+                        .card_orange { border-right-color: #f59e0b; }
+                        .card_purple { border-right-color: #8b5cf6; }
+                    </style>
+
+                    <div class="dashboard_container">
+                        <!-- Banner -->
+                        <div class="header_banner">
+                            <h1 style="font-weight: 900; font-size: 3em; margin-bottom: 10px; letter-spacing: 2px;">TRAVEL PRO</h1>
+                            <p style="font-size: 1.4em; opacity: 0.95; font-weight: 500;">نظام الإدارة المتكامل والإحصائيات المالية المتقدمة</p>
+                            <div class="mt-3">
+                                <span class="badge rounded-pill bg-light text-primary p-2 px-3">
+                                    <i class="fa fa-clock-o me-1"/> آخر تحديث: <field name="last_refresh"/>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Ligne 1 : Compteurs Principaux -->
+                        <div class="stat_cards_row">
+                            <div class="stat_card card_blue" onclick="document.querySelector('button[name=\'action_open_clients\']').click();">
+                                <div class="card_icon"><i class="fa fa-users text-primary"/></div>
+                                <div class="card_content">
+                                    <span class="card_label">إجمالي الزبائن</span>
+                                    <span class="card_value"><field name="total_clients"/></span>
+                                </div>
+                                <button name="action_open_clients" type="object" invisible="1"/>
+                            </div>
+
+                            <div class="stat_card card_green" onclick="document.querySelector('button[name=\'action_open_voyages\']').click();">
+                                <div class="card_icon"><i class="fa fa-plane text-success"/></div>
+                                <div class="card_content">
+                                    <span class="card_label">الرحلات النشطة</span>
+                                    <span class="card_value"><field name="total_voyages_actifs"/></span>
+                                </div>
+                                <button name="action_open_voyages" type="object" invisible="1"/>
+                            </div>
+
+                            <div class="stat_card card_orange" onclick="document.querySelector('button[name=\'action_open_reservations\']').click();">
+                                <div class="card_icon"><i class="fa fa-calendar-check-o text-warning"/></div>
+                                <div class="card_content">
+                                    <span class="card_label">إجمالي الحجوزات</span>
+                                    <span class="card_value"><field name="total_reservations"/></span>
+                                </div>
+                                <button name="action_open_reservations" type="object" invisible="1"/>
+                            </div>
+                        </div>
+
+                        <!-- Ligne 2 : Finances -->
+                        <div class="finance_row">
+                            <div class="finance_title">الملخص المالي (بالدينار التونسي - د.ت)</div>
+                            <div class="finance_grid">
+                                <div class="finance_item bg_blue">
+                                    <div style="font-size: 1.1em; font-weight: 600;">إجمالي الإيرادات</div>
+                                    <div style="font-size: 2em; font-weight: 800;"><field name="total_revenu"/></div>
+                                </div>
+                                <div class="finance_item bg_green">
+                                    <div style="font-size: 1.1em; font-weight: 600;">المبالغ المحصلة</div>
+                                    <div style="font-size: 2em; font-weight: 800;"><field name="total_encaisse"/></div>
+                                </div>
+                                <div class="finance_item bg_red">
+                                    <div style="font-size: 1.1em; font-weight: 600;">المتبقي غير المحصل</div>
+                                    <div style="font-size: 2em; font-weight: 800;"><field name="total_reste_apayer"/></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ligne 3 : Logistique Mini-Grid -->
+                        <h3 style="margin-bottom: 25px; color: #1e293b; font-weight: 800; text-align: right; border-right: 5px solid #8b5cf6; padding-right: 15px;">
+                            إحصائيات الخدمات واللوجستيات
+                        </h3>
+                        <div class="stat_cards_row">
+                            <div class="stat_card card_purple" style="min-width: 220px; padding: 20px;">
+                                <div class="card_icon" style="font-size: 2.2em;"><i class="fa fa-bed"/></div>
+                                <div class="card_content">
+                                    <span class="card_label">الفنادق المبرمجة</span>
+                                    <span class="card_value" style="font-size: 1.8em;"><field name="total_hotel"/></span>
+                                </div>
+                            </div>
+                            <div class="stat_card card_purple" style="min-width: 220px; padding: 20px;">
+                                <div class="card_icon" style="font-size: 2.2em;"><i class="fa fa-cutlery"/></div>
+                                <div class="card_content">
+                                    <span class="card_label">المطاعم والوجبات</span>
+                                    <span class="card_value" style="font-size: 1.8em;"><field name="total_restauration"/></span>
+                                </div>
+                            </div>
+                            <div class="stat_card card_purple" style="min-width: 220px; padding: 20px;">
+                                <div class="card_icon" style="font-size: 2.2em;"><i class="fa fa-map-signs"/></div>
+                                <div class="card_content">
+                                    <span class="card_label">المرشدين المتعاقدين</span>
+                                    <span class="card_value" style="font-size: 1.8em;"><field name="total_guide"/></span>
+                                </div>
+                            </div>
+                            <div class="stat_card card_purple" style="min-width: 220px; padding: 20px;">
+                                <div class="card_icon" style="font-size: 2.2em;"><i class="fa fa-bus"/></div>
+                                <div class="card_content">
+                                    <span class="card_label">عمليات النقل</span>
+                                    <span class="card_value" style="font-size: 1.8em;"><field name="total_transport"/></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bouton Refresh -->
+                        <div class="text-start mt-5">
+                            <button name="action_refresh" type="object" string="تحديث كامل البيانات" icon="fa-refresh" 
+                                    class="btn btn-secondary btn-lg shadow-sm" 
+                                    style="border-radius: 12px; padding: 12px 25px; font-weight: 700;"/>
+                        </div>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

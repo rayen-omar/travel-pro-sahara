@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_caisse_form" model="ir.ui.view">
+        <field name="name">travel_pro_sahara.caisse.form</field>
+        <field name="model">travel_pro_sahara.caisse</field>
+        <field name="arch" type="xml">
+            <form string="الصندوق" create="0" delete="0">
+                <sheet>
+                    <field name="company_currency_id" invisible="1"/>
+                    <div class="o_horizontal_separator mb-4 mt-2 text-center text-primary" style="font-weight: bold; font-size: 24px; text-transform: uppercase;">
+                        الصندوق العام
+                    </div>
+                    
+                    <div class="row text-center mb-4" style="background-color: #f8f9fa; padding: 20px; border-radius: 10px; border: 1px solid #dee2e6;">
+                        <div class="col-4 border-end">
+                            <h3 class="text-muted mb-2">نقداً</h3>
+                            <h2 class="text-success fw-bold"><field name="solde_especes" widget="monetary" options="{'currency_field': 'company_currency_id'}"/></h2>
+                        </div>
+                        <div class="col-4 border-end">
+                            <h3 class="text-muted mb-2">البنك</h3>
+                            <h2 class="text-info fw-bold"><field name="solde_banque" widget="monetary" options="{'currency_field': 'company_currency_id'}"/></h2>
+                        </div>
+                        <div class="col-4">
+                            <h3 class="text-muted mb-2">الإجمالي</h3>
+                            <h2 class="text-primary fw-bold"><field name="solde_total" widget="monetary" options="{'currency_field': 'company_currency_id'}"/></h2>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between mb-3 align-items-end">
+                        <button name="action_nouveau_paiement" type="object" string="دفع جديد" class="btn-success btn-lg" icon="fa-plus"/>
+                        <button name="action_open_full_history" type="object" string="السجل الكامل وتصدير" class="btn-outline-primary btn-lg" icon="fa-list"/>
+                    </div>
+
+                    <group string="تصفية السجل السريع">
+                        <group>
+                            <field name="filter_journal_id" string="اليومية" options="{'no_create': True}"/>
+                            <field name="filter_partner_id" string="الشريك" options="{'no_create': True}"/>
+                        </group>
+                        <group>
+                            <label for="filter_date_start" string="الفترة"/>
+                            <div class="o_row">
+                                <field name="filter_date_start"/> إلى <field name="filter_date_end"/>
+                            </div>
+                        </group>
+                    </group>
+
+                    <field name="payment_ids" readonly="1">
+                        <list create="0" edit="0" delete="0" decoration-success="state in ('posted', 'in_process', 'paid')" decoration-muted="state == 'cancel'">
+                            <field name="date" string="التاريخ"/>
+                            <field name="partner_id" string="الشريك"/>
+                            <field name="journal_id" string="اليومية"/>
+                            <field name="amount" string="المبلغ"/>
+                            <field name="state" string="الحالة" widget="badge" decoration-success="state in ('posted', 'in_process', 'paid')" decoration-info="state == 'draft'"/>
+                        </list>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action Serveur pour ouvrir dynamiquement le Dashboard Caisse -->
+    <record id="action_caisse_travel_server" model="ir.actions.server">
+        <field name="name">الصندوق Travel Pro</field>
+        <field name="model_id" ref="model_travel_pro_sahara_caisse"/>
+        <field name="state">code</field>
+        <field name="code">
+caisse = env['travel_pro_sahara.caisse'].search([('create_uid', '=', env.uid)], limit=1)
+if not caisse:
+    caisse = env['travel_pro_sahara.caisse'].create({})
+action = {
+    'name': 'الصندوق Travel Pro',
+    'type': 'ir.actions.act_window',
+    'res_model': 'travel_pro_sahara.caisse',
+    'view_mode': 'form',
+    'res_id': caisse.id,
+    'target': 'current',
+}
+        </field>
+    </record>
+
+    <menuitem id="menu_caisse" name="الصندوق" parent="menu_travelprosaara_root" action="action_caisse_travel_server" sequence="29"/>
+
+    <!-- Héritage de la vue form de account.payment pour ajouter le bouton -->
+    <record id="view_account_payment_form_inherit_travel" model="ir.ui.view">
+        <field name="name">account.payment.form.inherit.travel</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_force_paid" type="object" string="تحديد كمدفوع" class="btn-success" invisible="state != 'in_process' or force_paid"/>
+            </xpath>
+            <xpath expr="//sheet" position="inside">
+                <field name="force_paid" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

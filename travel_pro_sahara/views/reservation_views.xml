@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Vue liste passager -->
+    <record id="view_reservation_passager_list" model="ir.ui.view">
+        <field name="name">travel_pro_sahara.reservation_passager.list</field>
+        <field name="model">travel_pro_sahara.reservation_passager</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="nom_passager" string="اسم الراكب"/>
+                <field name="type_place" string="النوع"/>
+                <field name="age" string="العمر"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_reservation_graph" model="ir.ui.view">
+        <field name="name">travel_pro_sahara.reservation.graph</field>
+        <field name="model">travel_pro_sahara.reservation</field>
+        <field name="arch" type="xml">
+            <graph string="تحليل الحجوزات" type="bar">
+                <field name="date_reservation" interval="month"/>
+                <field name="prix_calcule" type="measure" string="السعر المحسوب"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="view_reservation_pivot" model="ir.ui.view">
+        <field name="name">travel_pro_sahara.reservation.pivot</field>
+        <field name="model">travel_pro_sahara.reservation</field>
+        <field name="arch" type="xml">
+            <pivot string="تحليل الحجوزات" display_quantity="1">
+                <field name="voyage_id" type="row"/>
+                <field name="state" type="col"/>
+                <field name="prix_calcule" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="action_reservation" model="ir.actions.act_window">
+        <field name="name">الحجوزات</field>
+        <field name="res_model">travel_pro_sahara.reservation</field>
+        <field name="view_mode">kanban,list,form</field>
+    </record>
+
+    <record id="view_reservation_kanban" model="ir.ui.view">
+        <field name="name">travel_pro_sahara.reservation.kanban</field>
+        <field name="model">travel_pro_sahara.reservation</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile" sample="1">
+                <field name="name"/>
+                <field name="client_id"/>
+                <field name="voyage_id"/>
+                <field name="nombre_passagers"/>
+                <field name="date_reservation"/>
+                <field name="state"/>
+                <field name="prix_calcule"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div class="oe_kanban_details">
+                                <div class="o_kanban_record_top">
+                                    <div class="o_kanban_record_headings">
+                                        <strong class="o_kanban_record_title"><field name="name"/></strong>
+                                    </div>
+                                    <div class="o_dropdown_kanban dropdown">
+                                        <a role="button" class="dropdown-toggle o-no-caret btn" data-bs-toggle="dropdown" href="#" aria-label="Dropdown menu" title="Dropdown menu">
+                                            <span class="fa fa-ellipsis-v"/>
+                                        </a>
+                                        <div class="dropdown-menu" role="menu">
+                                            <a role="menuitem" type="edit" class="dropdown-item">تعديل</a>
+                                            <a role="menuitem" type="delete" class="dropdown-item">حذف</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o_kanban_record_body mt-2">
+                                    <div><i class="fa fa-user me-1" title="Client"/> <field name="client_id"/></div>
+                                    <div><i class="fa fa-plane me-1" title="Voyage"/> <field name="voyage_id"/></div>
+                                    <div t-if="record.nombre_passagers.raw_value"><i class="fa fa-users me-1" title="Passagers"/> <field name="nombre_passagers"/> راكب</div>
+                                </div>
+                                <div class="o_kanban_record_bottom mt-2">
+                                    <div class="oe_kanban_bottom_left">
+                                        <field name="state" widget="label_selection" options="{'classes': {'brouillon': 'secondary', 'confirmee': 'primary', 'facturee': 'info', 'payee': 'success', 'annulee': 'danger'}}"/>
+                                    </div>
+                                    <div class="oe_kanban_bottom_right">
+                                        <strong class="text-primary"><field name="prix_calcule" widget="monetary"/></strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="view_reservation_list" model="ir.ui.view">
+        <field name="name">travel_pro_sahara.reservation.list</field>
+        <field name="model">travel_pro_sahara.reservation</field>
+        <field name="arch" type="xml">
+            <list string="الحجوزات">
+                <field name="name" string="المرجع" class="fw-bold"/>
+                <field name="date_reservation" string="تاريخ الحجز"/>
+                <field name="client_id" string="الزبون"/>
+                <field name="voyage_id" string="الرحلة"/>
+                <field name="nombre_passagers" string="الركاب"/>
+                <field name="prix_calcule" widget="monetary" string="إجمالي السعر"/>
+                <field name="montant_paye" widget="monetary" optional="hide" string="المبلغ المدفوع"/>
+                <field name="reste_a_payer" widget="monetary" decoration-danger="reste_a_payer &gt; 0" decoration-bf="1" string="الباقي"/>
+                <field name="is_invoiced" string="مفوتر" optional="hide" invisible="not is_invoiced or is_paid"/>
+                <field name="is_paid" string="مدفوع" optional="hide" invisible="not is_paid"/>
+                <field name="state" widget="badge" string="الحالة" decoration-muted="state == 'brouillon'" decoration-primary="state == 'confirmee'" decoration-info="state == 'facturee'" decoration-success="state == 'payee'" decoration-danger="state == 'annulee'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_reservation_form" model="ir.ui.view">
+        <field name="name">travel_pro_sahara.reservation.form</field>
+        <field name="model">travel_pro_sahara.reservation</field>
+        <field name="priority">5</field>
+        <field name="arch" type="xml">
+            <form string="الحجز">
+                <header>
+                    <button name="action_create_quotation" type="object" string="إنشاء عرض سعر" class="btn-info" invisible="state != 'brouillon'"/>
+                    <button name="action_create_invoice" type="object" string="إنشاء فاتورة" class="btn-success" invisible="state != 'confirmee'"/>
+                    <button name="action_confirmer" type="object" string="تأكيد" class="btn-primary" invisible="state != 'brouillon'"/>
+                    <button name="action_annuler" type="object" string="إلغاء الحجز" invisible="state not in ('brouillon', 'confirmee')"/>
+                    <button name="action_remettre_brouillon" type="object" string="إرجاع إلى مسودة" invisible="state != 'annulee'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="brouillon,confirmee,facturee,payee"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_quotations" type="object" class="oe_stat_button" icon="fa-pencil-square-o" invisible="quotation_count == 0">
+                            <div class="o_stat_info">
+                                <span class="o_stat_value"><field name="quotation_count"/></span>
+                                <span class="o_stat_text">عروض أسعار</span>
+                            </div>
+                        </button>
+                        <button name="action_view_invoices" type="object" class="oe_stat_button" icon="fa-money" invisible="invoice_count == 0">
+                            <div class="o_stat_info">
+                                <span class="o_stat_value"><field name="invoice_count"/></span>
+                                <span class="o_stat_text">الفواتير</span>
+                            </div>
+                        </button>
+                    </div>
+                    <field name="is_paid" invisible="1"/>
+                    <field name="is_invoiced" invisible="1"/>
+                    <widget name="web_ribbon" title="ملغى" bg_color="text-bg-danger" invisible="state != 'annulee'"/>
+                    <widget name="web_ribbon" title="مدفوع" bg_color="text-bg-success" invisible="not is_paid or state == 'annulee'"/>
+                    <widget name="web_ribbon" title="مفوتر" bg_color="text-bg-info" invisible="not is_invoiced or is_paid or state == 'annulee'"/>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group string="تفاصيل الحجز">
+                            <field name="date_reservation" string="تاريخ الحجز"/>
+                            <field name="client_id" string="الزبون"/>
+                            <field name="voyage_id" string="الرحلة"/>
+                            <field name="nombre_passagers" string="عدد الركاب"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="notes" placeholder="ملاحظات وتعليمات خاصة..." nolabel="1" colspan="2"/>
+                    </group>
+                    <notebook>
+                        <page string="الركاب" name="passagers">
+                            <field name="reservation_passager_ids" nolabel="1">
+                                <list editable="bottom" create="1" delete="1">
+                                    <field name="nom_passager" string="اسم الراكب"/>
+                                    <field name="type_place" string="النوع"/>
+                                    <field name="age" string="العمر"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="اليومية" name="voyage_jour">
+                            <field name="reservation_jour_ids" nolabel="1">
+                                <list editable="bottom" create="1" delete="1">
+                                    <field name="voyage_id" column_invisible="True"/>
+                                    <field name="numero_jour" string="اليوم رقم"/>
+                                    <field name="destination_id" string="الوجهة" domain="[('voyage_id', '=', voyage_id)]"/>
+                                    <field name="description" string="الوصف"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="النقل" name="transport">
+                            <field name="reservation_transport_ids" nolabel="1">
+                                <list editable="bottom" create="1" delete="1">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="type_transport" string="النوع"/>
+                                    <field name="jour" string="اليوم"/>
+                                    <field name="lieu_depart" string="الانطلاق"/>
+                                    <field name="lieu_arrive" string="الوصول"/>
+                                    <field name="prix" string="السعر"/>
+                                    <field name="description" string="الوصف"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="الفنادق" name="hotel">
+                            <field name="reservation_hotel_ids" nolabel="1">
+                                <list editable="bottom" create="1" delete="1">
+                                    <field name="nom_hotel" string="اسم الفندق"/>
+                                    <field name="telephone" string="الهاتف"/>
+                                    <field name="adresse" string="العنوان"/>
+                                    <field name="prix_nuit" string="سعر الليلة"/>
+                                    <field name="check_in" string="الدخول"/>
+                                    <field name="check_out" string="الخروج"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="المطاعم" name="restauration">
+                            <field name="reservation_restauration_ids" nolabel="1">
+                                <list editable="bottom" create="1" delete="1">
+                                    <field name="nom_restaurant" string="اسم المطعم"/>
+                                    <field name="adresse" string="العنوان"/>
+                                    <field name="type_repas" string="نوع الوجبة"/>
+                                    <field name="prix" string="السعر"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="المرشدين" name="guide">
+                            <field name="reservation_guide_ids" nolabel="1">
+                                <list editable="bottom" create="1" delete="1">
+                                    <field name="nom_guide" string="اسم المرشد"/>
+                                    <field name="telephone" string="الهاتف"/>
+                                    <field name="prix" string="السعر"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="المعدات" name="equipement">
+                            <field name="reservation_equipement_ids" nolabel="1">
+                                <list editable="bottom" create="1" delete="1">
+                                    <field name="product_id" string="المنتج"/>
+                                    <field name="nom_equipement" string="اسم المعدة"/>
+                                    <field name="quantite" string="الكمية"/>
+                                    <field name="prix" string="السعر"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

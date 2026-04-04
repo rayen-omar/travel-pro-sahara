@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Action pour les journaux comptables -->
+    <record id="action_account_journal_travel" model="ir.actions.act_window">
+        <field name="name">Journaux Comptables</field>
+        <field name="res_model">account.journal</field>
+        <field name="view_mode">list,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Créez vos journaux (Banque, Caisse, etc.) !
+            </p>
+        </field>
+    </record>
+
+    <!-- Action pour les paiements clients (lié à la facturation) -->
+    <record id="action_account_payment_travel" model="ir.actions.act_window">
+        <field name="name">Paiements</field>
+        <field name="res_model">account.payment</field>
+        <field name="view_mode">list,kanban,form</field>
+        <field name="domain">[('partner_type', '=', 'customer')]</field>
+        <field name="context">{'default_partner_type': 'customer', 'default_payment_type': 'inbound'}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Enregistrez vos paiements ici.
+            </p>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_form_inherit_travel_v2" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.travel.v2</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <!-- 1. Suppression/Masquage des champs standards encombrants -->
+            <xpath expr="//field[@name='payment_term_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='validity_date']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='pricelist_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//header" position="inside">
+                <button name="%(sale.action_report_saleorder)d" string="طباعة عرض السعر" type="action" class="btn-primary" invisible="state not in ('draft', 'sent')"/>
+            </xpath>
+
+            <!-- 2. Organisation de l'en-tête Travel Pro -->
+            <xpath expr="//group[@name='sale_header']" position="replace">
+                <div class="row" style="background-color: #fcfcfc; padding: 20px; border-radius: 10px; border: 1px solid #eee; margin-bottom: 20px;">
+                    <div class="col-6">
+                        <h2 class="text-primary" style="margin-top: 0;">تفاصيل العرض للزبون</h2>
+                        <group>
+                            <field name="partner_id" widget="res_partner_many2one" string="الزبون" options='{"no_open": True, "no_create": True}'/>
+                            <field name="date_order" string="تاريخ العرض"/>
+                        </group>
+                    </div>
+                    <div class="col-6 text-end">
+                        <div style="background: #1a237e; color: white; padding: 15px; border-radius: 8px; display: inline-block; min-width: 200px;">
+                            <span style="font-size: 1.2em; opacity: 0.8;">إجمالي قيمة الباقة</span><br/>
+                            <span style="font-size: 2.2em; font-weight: 900;"><field name="amount_total" widget="monetary"/></span>
+                        </div>
+                        <div class="mt-2">
+                             <field name="reservation_id" readonly="1" string="مرجع الحجز: " class="fw-bold"/>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+
+            <!-- 3. Remplacement des onglets par une vue 100% Voyage -->
+            <xpath expr="//notebook" position="replace">
+                <notebook>
+                    <page string="مكونات باقة السفر" name="travel_package_main">
+                        <div class="alert alert-info py-2" role="alert" invisible="not reservation_id">
+                            <i class="fa fa-info-circle me-1"/> يتم سحب هذه المعلومات تلقائياً من نظام الحجوزات
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-12 mb-4">
+                                <h4 class="bg-light p-2 border-start border-primary border-4">1. قائمة الركاب والمشاركين</h4>
+                                <field name="reservation_passager_ids_related" readonly="1">
+                                    <list create="0" delete="0">
+                                        <field name="nom_passager" string="اسم الراكب"/>
+                                        <field name="type_place" string="النوع"/>
+                                        <field name="age" string="العمر"/>
+                                    </list>
+                                </field>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h4 class="bg-light p-2 border-start border-success border-4">2. الإقامة والفنادق</h4>
+                                <field name="reservation_hotel_ids_related" readonly="1">
+                                    <list create="0" delete="0">
+                                        <field name="nom_hotel" string="الفندق"/>
+                                        <field name="check_in" string="من"/>
+                                        <field name="check_out" string="إلى"/>
+                                        <field name="prix_nuit" string="السعر لليلة"/>
+                                    </list>
+                                </field>
+                            </div>
+                            <div class="col-md-5">
+                                <h4 class="bg-light p-2 border-start border-warning border-4">3. وسائل النقل</h4>
+                                <field name="reservation_transport_ids_related" readonly="1">
+                                    <list create="0" delete="0">
+                                        <field name="type_transport" string="الوسيلة"/>
+                                        <field name="lieu_depart" string="من"/>
+                                        <field name="lieu_arrive" string="إلى"/>
+                                    </list>
+                                </field>
+                            </div>
+                        </div>
+
+                        <div class="mt-4">
+                             <h4 class="bg-light p-2 border-start border-info border-4">4. ملخص الفوترة</h4>
+                             <field name="order_line" widget="section_and_note_one2many" mode="list">
+                                <list readonly="1">
+                                    <field name="name" string="الوصف"/>
+                                    <field name="product_uom_qty" string="الكمية"/>
+                                    <field name="price_unit" string="سعر الوحدة"/>
+                                    <field name="price_subtotal" string="المجموع"/>
+                                </list>
+                             </field>
+                        </div>
+                    </page>
+                    
+                    <page string="ملاحظات وشروط" name="travel_terms">
+                        <field name="note" placeholder="أضف هنا أي شروط خاصة للرحلة أو ملاحظات للزبون..." nolabel="1"/>
+                    </page>
+                </notebook>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Action pour les devis (Draft) -->
+    <record id="action_quotations_travel_pro" model="ir.actions.act_window">
+        <field name="name">عروض أسعار</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('state', 'in', ('draft', 'sent'))]</field>
+        <field name="context">{'create': False}</field>
+    </record>
+
+    <!-- Action pour les Bons de commande (Confirmed) -->
+    <record id="action_orders_travel_pro" model="ir.actions.act_window">
+        <field name="name">أوامر البيع</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('state', 'not in', ('draft', 'sent', 'cancel'))]</field>
+        <field name="context">{'create': False}</field>
+    </record>
+
+    <!-- Version simplifiée de l'action Guide (act_window) -->
+    <record id="action_travel_pro_guide_v2" model="ir.actions.act_window">
+        <field name="name">دليل المستخدم</field>
+        <field name="res_model">travel_pro_sahara.guide</field>
+        <field name="view_mode">form</field>
+        <field name="target">current</field>
+        <field name="res_id" ref="travel_pro_sahara.default_travel_pro_guide"/>
+    </record>
+</odoo>

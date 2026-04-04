@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="default_travel_pro_guide" model="travel_pro_sahara.guide">
+            <field name="name">دليل البدء السريع</field>
+        </record>
+    </data>
+</odoo>

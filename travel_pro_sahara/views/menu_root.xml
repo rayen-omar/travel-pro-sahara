@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Racine de l'application -->
+    <menuitem id="menu_travelprosaara_root" name="Travel Pro" sequence="10"/>
+</odoo>

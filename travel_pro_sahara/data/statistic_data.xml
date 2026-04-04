@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="statistic_main" model="travel_pro_sahara.statistic">
+            <field name="name">Tableau de Bord Sahara</field>
+        </record>
+    </data>
+</odoo>

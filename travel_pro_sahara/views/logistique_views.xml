@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- PROGRAMME JOUR PAR JOUR -->
+    <record id="action_voyage_jour" model="ir.actions.act_window">
+        <field name="name">اليومية</field>
+        <field name="res_model">travel_pro_sahara.voyage_jour</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_voyage_jour_list" model="ir.ui.view">
+        <field name="name">travel_pro_sahara.voyage_jour.list</field>
+        <field name="model">travel_pro_sahara.voyage_jour</field>
+        <field name="arch" type="xml">
+            <list string="اليومية">
+                <field name="numero_jour" string="رقم اليوم"/>
+                <field name="voyage_id" string="الرحلة"/>
+                <field name="reservation_id" string="الحجز"/>
+                <field name="client_id" string="الزبون"/>
+                <field name="destination_id" string="الوجهة"/>
+                <field name="description" string="الوصف"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- TRANSPORT -->
+    <record id="action_voyage_transport" model="ir.actions.act_window">
+        <field name="name">النقل</field>
+        <field name="res_model">travel_pro_sahara.voyage_transport</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_voyage_transport_list" model="ir.ui.view">
+        <field name="name">travel_pro_sahara.voyage_transport.list</field>
+        <field name="model">travel_pro_sahara.voyage_transport</field>
+        <field name="arch" type="xml">
+            <list string="النقل">
+                <field name="voyage_id" string="الرحلة"/>
+                <field name="reservation_id" string="الحجز"/>
+                <field name="client_id" string="الزبون"/>
+                <field name="type_transport" string="النوع"/>
+                <field name="jour" string="اليوم"/>
+                <field name="lieu_depart" string="الانطلاق"/>
+                <field name="lieu_arrive" string="الوصول"/>
+                <field name="prix" string="السعر"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- HOTEL -->
+    <record id="action_voyage_hotel" model="ir.actions.act_window">
+        <field name="name">الفنادق</field>
+        <field name="res_model">travel_pro_sahara.voyage_hotel</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_voyage_hotel_list" model="ir.ui.view">
+        <field name="name">travel_pro_sahara.voyage_hotel.list</field>
+        <field name="model">travel_pro_sahara.voyage_hotel</field>
+        <field name="arch" type="xml">
+            <list string="الفنادق">
+                <field name="voyage_id" string="الرحلة"/>
+                <field name="reservation_id" string="الحجز"/>
+                <field name="client_id" string="الزبون"/>
+                <field name="nom_hotel" string="اسم الفندق"/>
+                <field name="check_in" string="دخول"/>
+                <field name="check_out" string="خروج"/>
+                <field name="prix_nuit" string="سعر الليلة"/>
+                <field name="telephone" string="الهاتف"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- RESTAURATION -->
+    <record id="action_voyage_restauration" model="ir.actions.act_window">
+        <field name="name">المطاعم</field>
+        <field name="res_model">travel_pro_sahara.voyage_restauration</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_voyage_restauration_list" model="ir.ui.view">
+        <field name="name">travel_pro_sahara.voyage_restauration.list</field>
+        <field name="model">travel_pro_sahara.voyage_restauration</field>
+        <field name="arch" type="xml">
+            <list string="المطاعم">
+                <field name="voyage_id" string="الرحلة"/>
+                <field name="reservation_id" string="الحجز"/>
+                <field name="client_id" string="الزبون"/>
+                <field name="nom_restaurant" string="اسم المطعم"/>
+                <field name="type_repas" string="نوع الوجبة"/>
+                <field name="prix" string="السعر"/>
+                <field name="adresse" string="العنوان"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- GUIDE -->
+    <record id="action_voyage_guide" model="ir.actions.act_window">
+        <field name="name">المرشدين</field>
+        <field name="res_model">travel_pro_sahara.voyage_guide</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_voyage_guide_list" model="ir.ui.view">
+        <field name="name">travel_pro_sahara.voyage_guide.list</field>
+        <field name="model">travel_pro_sahara.voyage_guide</field>
+        <field name="arch" type="xml">
+            <list string="المرشدين">
+                <field name="voyage_id" string="الرحلة"/>
+                <field name="reservation_id" string="الحجز"/>
+                <field name="client_id" string="الزبون"/>
+                <field name="nom_guide" string="اسم المرشد"/>
+                <field name="telephone" string="الهاتف"/>
+                <field name="prix" string="السعر"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- EQUIPEMENT -->
+    <record id="action_voyage_equipement" model="ir.actions.act_window">
+        <field name="name">المعدات</field>
+        <field name="res_model">travel_pro_sahara.voyage_equipement</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_voyage_equipement_list" model="ir.ui.view">
+        <field name="name">travel_pro_sahara.voyage_equipement.list</field>
+        <field name="model">travel_pro_sahara.voyage_equipement</field>
+        <field name="arch" type="xml">
+            <list string="المعدات">
+                <field name="voyage_id" string="الرحلة"/>
+                <field name="reservation_id" string="الحجز"/>
+                <field name="client_id" string="الزبون"/>
+                <field name="product_id" string="المنتج"/>
+                <field name="nom_equipement" string="اسم المعدة"/>
+                <field name="quantite" string="الكمية"/>
+                <field name="prix" string="السعر"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- MENUS LOGISTIQUE -->
+    <menuitem id="menu_logistique_root" name="اللوجستيات" parent="menu_travelprosaara_root" sequence="500"/>
+    
+    <menuitem id="menu_voyage_jour" name="اليومية" parent="menu_logistique_root" action="action_voyage_jour" sequence="10"/>
+    <menuitem id="menu_voyage_transport" name="النقل" parent="menu_logistique_root" action="action_voyage_transport" sequence="20"/>
+    <menuitem id="menu_voyage_hotel" name="الفنادق" parent="menu_logistique_root" action="action_voyage_hotel" sequence="30"/>
+    <menuitem id="menu_voyage_restauration" name="المطاعم" parent="menu_logistique_root" action="action_voyage_restauration" sequence="40"/>
+    <menuitem id="menu_voyage_guide" name="المرشدين" parent="menu_logistique_root" action="action_voyage_guide" sequence="50"/>
+    <menuitem id="menu_voyage_equipement" name="المعدات" parent="menu_logistique_root" action="action_voyage_equipement" sequence="60"/>
+
+</odoo>

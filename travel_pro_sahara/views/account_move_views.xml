@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_move_form_travel_simplification" model="ir.ui.view">
+        <field name="name">account.move.form.travel</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+
+
+            <!-- Ajout des champs techniques -->
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="reservation_id" invisible="1"/>
+            </xpath>
+
+            <!-- ===== MASQUER LES CHAMPS NON PERTINENTS POUR UNE AGENCE DE VOYAGE ===== -->
+
+            <!-- Adresse de livraison -->
+            <xpath expr="//field[@name='partner_shipping_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <!-- Conditions de paiement (masqué par défaut) -->
+            <xpath expr="//field[@name='invoice_payment_term_id']" position="attributes">
+                <attribute name="optional">hide</attribute>
+            </xpath>
+
+            <!-- Incoterms -->
+            <xpath expr="//field[@name='invoice_incoterm_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <!-- Position fiscale -->
+            <xpath expr="//field[@name='fiscal_position_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <!-- Référence paiement -->
+            <xpath expr="//field[@name='payment_reference']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <!-- Masquer l'onglet Autres informations -->
+            <xpath expr="//page[@name='other_info']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+    <!-- ===== ACTION MENU FACTURES : filtrée sur les factures clients uniquement ===== -->
+    <record id="action_facture_travel" model="ir.actions.act_window">
+        <field name="name">Factures de Réservation</field>
+        <field name="res_model">account.move</field>
+        <field name="view_mode">list,kanban,form</field>
+        <field name="domain">[('move_type', '=', 'out_invoice')]</field>
+        <field name="context">{'default_move_type': 'out_invoice'}</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Menu principal Stock -->
+    <menuitem id="menu_stock_root"
+              name="المخزن"
+              parent="menu_travelprosaara_root"
+              sequence="35"/>
+
+    <!-- Sous-menus -->
+    <menuitem id="menu_stock_inventory"
+              name="الجرد الفعلي"
+              parent="menu_stock_root"
+              action="stock.action_view_inventory_tree"
+              sequence="10"/>
+
+    <menuitem id="menu_stock_warehouse"
+              name="المستودعات"
+              parent="menu_stock_root"
+              action="stock.action_warehouse_form"
+              sequence="20"/>
+
+    <menuitem id="menu_stock_product"
+              name="المنتجات"
+              parent="menu_stock_root"
+              action="product.product_template_action"
+              sequence="30"/>
+
+    <menuitem id="menu_stock_category"
+              name="الفئات"
+              parent="menu_stock_root"
+              action="product.product_category_action_form"
+              sequence="40"/>
+
+    <menuitem id="menu_stock_analysis"
+              name="تحليل المخزون"
+              parent="menu_stock_root"
+              action="stock.stock_move_line_action"
+              sequence="50"/>
+</odoo>
