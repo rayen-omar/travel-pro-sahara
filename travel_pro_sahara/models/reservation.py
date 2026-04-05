@@ -129,6 +129,23 @@ class TravelProSaharaReservation(models.Model):
     )
     notes = fields.Text(string="ملاحظات")
 
+    @api.onchange('voyage_id')
+    def _onchange_voyage_id(self):
+        """ Remplir automatiquement le programme quotidien du voyage """
+        if self.voyage_id:
+            # Nettoyer les anciennes lignes
+            self.reservation_jour_ids = [(5, 0, 0)]
+            
+            # Créer de nouvelles lignes basées sur les destinations du voyage
+            new_lines = []
+            for i, dest in enumerate(self.voyage_id.destination_ids, 1):
+                new_lines.append((0, 0, {
+                    'numero_jour': i,
+                    'destination_id': dest.id,
+                    'description': f"زيارة {dest.ville}",
+                }))
+            self.reservation_jour_ids = new_lines
+
     @api.model_create_multi
     def create(self, vals_list):
         for vals in vals_list:
@@ -253,12 +270,21 @@ class TravelProSaharaReservation(models.Model):
         }
 
     def _get_default_sale_product(self):
-        product = self.env['product.product'].search([('name', '=', 'خدمة سفر')], limit=1)
+        """Récupère ou crée le produit par défaut pour les services de l'agence."""
+        # On cherche d'abord par référence interne exclusive si possible, 
+        # sinon par nom en limitant à 1 record.
+        product = self.env['product.product'].search([
+            '|', ('default_code', '=', 'TP_SERVICE'), ('name', '=', 'خدمة سفر')
+        ], limit=1)
+        
         if not product:
             product = self.env['product.product'].create({
                 'name': 'خدمة سفر',
+                'default_code': 'TP_SERVICE',
                 'type': 'service',
                 'lst_price': 0.0,
+                'sale_ok': True,
+                'purchase_ok': False,
             })
         return product
 
@@ -362,6 +388,7 @@ class TravelProSaharaReservation(models.Model):
         if self.voyage_id:
             order_lines.append((0, 0, {
                 'product_id': product.id,
+                'product_uom': product.uom_id.id,
                 'name': f"الرحلة: {self.voyage_id.name}",
                 'product_uom_qty': self.nombre_passagers,
                 'price_unit': self.voyage_id.prix_adulte or 0.0,
@@ -369,9 +396,14 @@ class TravelProSaharaReservation(models.Model):
 
         for transport in self.reservation_transport_ids:
             if transport.prix:
+                # Éviter d'afficher 'False' si un lieu est manquant
+                dep = transport.lieu_depart or ""
+                arr = transport.lieu_arrive or ""
+                arrow = " ➔ " if dep or arr else ""
                 order_lines.append((0, 0, {
                     'product_id': product.id,
-                    'name': f"النقل ({transport.type_transport}) - {transport.lieu_depart} ➔ {transport.lieu_arrive}",
+                    'product_uom': product.uom_id.id,
+                    'name': f"النقل ({transport.type_transport or ''}) {dep}{arrow}{arr}",
                     'product_uom_qty': 1,
                     'price_unit': transport.prix,
                 }))
@@ -384,16 +416,19 @@ class TravelProSaharaReservation(models.Model):
                     nuits = delta if delta > 0 else 1
                 order_lines.append((0, 0, {
                     'product_id': product.id,
-                    'name': f"إقامة فندق: {hotel.nom_hotel}",
+                    'product_uom': product.uom_id.id,
+                    'name': f"إقامة فندق: {hotel.nom_hotel or ''}",
                     'product_uom_qty': nuits,
                     'price_unit': hotel.prix_nuit,
                 }))
 
         for equip in self.reservation_equipement_ids:
             if equip.prix:
+                line_product = equip.product_id if equip.product_id else product
                 vals = {
-                    'product_id': equip.product_id.id if equip.product_id else product.id,
-                    'name': f"المعدات: {equip.nom_equipement}",
+                    'product_id': line_product.id,
+                    'product_uom': line_product.uom_id.id,
+                    'name': f"المعدات: {equip.nom_equipement or ''}",
                     'product_uom_qty': equip.quantite or 1,
                     'price_unit': equip.prix,
                 }

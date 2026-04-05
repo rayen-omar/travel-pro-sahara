@@ -65,6 +65,19 @@
 
     <menuitem id="menu_voyage" name="الرحلات" parent="menu_travelprosaara_root" action="action_voyage" sequence="20"/>
     <menuitem id="menu_reservation" name="الحجوزات" parent="menu_travelprosaara_root" action="action_reservation" sequence="25"/>
+
+    <!-- Menu Produits repositionné après الحجوزات -->
+    <menuitem id="menu_product_root" name="المنتجات والخدمات" parent="menu_travelprosaara_root" sequence="30"/>
+    <menuitem id="menu_product_template" 
+              name="إدارة المنتجات" 
+              parent="menu_product_root" 
+              action="sale.product_template_action" 
+              sequence="10"/>
+    <menuitem id="menu_product_category" 
+              name="فئات الخدمات" 
+              parent="menu_product_root" 
+              action="product.product_category_action_form" 
+              sequence="20"/>
     
     <menuitem id="menu_statistic" name="لوحة التحكم" parent="menu_travelprosaara_root" action="action_statistic" sequence="100"/>
     

@@ -39,9 +39,20 @@
                 <attribute name="invisible">1</attribute>
             </xpath>
 
-            <!-- Masquer l'onglet Autres informations -->
+            <!-- Rétablissement de l'onglet "Journal Items" (بنود القيد) -->
             <xpath expr="//page[@name='other_info']" position="attributes">
-                <attribute name="invisible">1</attribute>
+                <attribute name="invisible">0</attribute>
+                <attribute name="string">معلومات أخرى</attribute>
+            </xpath>
+
+            <!-- On s'assure que l'onglet des écritures comptables est visible -->
+            <xpath expr="//page[@name='aml_tab']" position="attributes">
+                <attribute name="invisible">0</attribute>
+            </xpath>
+
+             <!-- Ajout du compte comptable sur les lignes de facture si nécessaire (optionnel car présent dans aml_tab) -->
+            <xpath expr="//field[@name='invoice_line_ids']/list/field[@name='account_id']" position="attributes">
+                <attribute name="column_invisible">0</attribute>
             </xpath>
 
         </field>

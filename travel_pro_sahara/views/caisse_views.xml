@@ -5,11 +5,11 @@
         <field name="name">travel_pro_sahara.caisse.form</field>
         <field name="model">travel_pro_sahara.caisse</field>
         <field name="arch" type="xml">
-            <form string="الصندوق" create="0" delete="0">
+            <form string="الخزينة" create="0" delete="0">
                 <sheet>
                     <field name="company_currency_id" invisible="1"/>
                     <div class="o_horizontal_separator mb-4 mt-2 text-center text-primary" style="font-weight: bold; font-size: 24px; text-transform: uppercase;">
-                        الصندوق العام
+                        الخزينة العامة
                     </div>
                     
                     <div class="row text-center mb-4" style="background-color: #f8f9fa; padding: 20px; border-radius: 10px; border: 1px solid #dee2e6;">
@@ -61,7 +61,7 @@
 
     <!-- Action Serveur pour ouvrir dynamiquement le Dashboard Caisse -->
     <record id="action_caisse_travel_server" model="ir.actions.server">
-        <field name="name">الصندوق Travel Pro</field>
+        <field name="name">الخزينة Travel Pro</field>
         <field name="model_id" ref="model_travel_pro_sahara_caisse"/>
         <field name="state">code</field>
         <field name="code">
@@ -69,7 +69,7 @@ caisse = env['travel_pro_sahara.caisse'].search([('create_uid', '=', env.uid)], 
 if not caisse:
     caisse = env['travel_pro_sahara.caisse'].create({})
 action = {
-    'name': 'الصندوق Travel Pro',
+    'name': 'الخزينة Travel Pro',
     'type': 'ir.actions.act_window',
     'res_model': 'travel_pro_sahara.caisse',
     'view_mode': 'form',
@@ -79,7 +79,7 @@ action = {
         </field>
     </record>
 
-    <menuitem id="menu_caisse" name="الصندوق" parent="menu_travelprosaara_root" action="action_caisse_travel_server" sequence="29"/>
+    <menuitem id="menu_caisse" name="الخزينة" parent="menu_travelprosaara_root" action="action_caisse_travel_server" sequence="29"/>
 
     <!-- Héritage de la vue form de account.payment pour ajouter le bouton -->
     <record id="view_account_payment_form_inherit_travel" model="ir.ui.view">

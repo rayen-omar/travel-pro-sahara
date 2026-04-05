@@ -10,7 +10,7 @@
     <menuitem id="menu_stock_inventory"
               name="الجرد الفعلي"
               parent="menu_stock_root"
-              action="stock.action_view_inventory_tree"
+              action="stock.action_view_quants"
               sequence="10"/>
 
     <menuitem id="menu_stock_warehouse"

@@ -109,14 +109,13 @@ msgstr "لوحة التحكم"
 #. module: travel_pro_sahara
 #: model:ir.ui.menu,name:travel_pro_sahara.menu_caisse
 msgid "Caisse"
-msgstr "الصندوق"
+msgstr "الخزينة"
 
 #. module: travel_pro_sahara
 #: model:ir.ui.menu,name:travel_pro_sahara.menu_guide
 msgid "Guide"
 msgstr "دليل المستخدم"
 
-# --- TRADUCTIONS DES CHAMPS (Fichier ar.po) ---
 #. module: travel_pro_sahara
 #: model:ir.model.fields,field_description:travel_pro_sahara.field_res_partner__nom
 msgid "Nom"
@@ -137,7 +136,11 @@ msgstr "رقم بطاقة التعريف"
 msgid "Numéro passeport"
 msgstr "رقم جواز السفر"
 
-# TRADUCTIONS DES BOUTONS ET LABELS DE VUES
+#. module: travel_pro_sahara
+#: model:ir.model,name:travel_pro_sahara.model_travel_pro_sahara_caisse
+msgid "لوحة معلومات الخزينة العامة"
+msgstr "لوحة معلومات الخزينة العامة"
+
 #. module: travel_pro_sahara
 msgid "Marquer comme Complet"
 msgstr "تحديد كمكتمل"

@@ -179,7 +179,7 @@
                                 <list editable="bottom" create="1" delete="1">
                                     <field name="voyage_id" column_invisible="True"/>
                                     <field name="numero_jour" string="اليوم رقم"/>
-                                    <field name="destination_id" string="الوجهة" domain="[('voyage_id', '=', voyage_id)]"/>
+                                    <field name="destination_id" string="الوجهة"/>
                                     <field name="description" string="الوصف"/>
                                 </list>
                             </field>

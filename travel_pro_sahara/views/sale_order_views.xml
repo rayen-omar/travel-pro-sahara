@@ -30,12 +30,10 @@
                         </group>
                     </div>
                     <div class="col-6 text-end">
-                        <div style="background: #1a237e; color: white; padding: 15px; border-radius: 8px; display: inline-block; min-width: 200px;">
-                            <span style="font-size: 1.2em; opacity: 0.8;">إجمالي قيمة الباقة</span><br/>
-                            <span style="font-size: 2.2em; font-weight: 900;"><field name="amount_total" widget="monetary"/></span>
-                        </div>
                         <div class="mt-2">
                              <field name="reservation_id" readonly="1" string="مرجع الحجز: " class="fw-bold"/>
+                             <br/>
+                             <field name="state" widget="badge" decoration-info="state == 'draft'" decoration-success="state == 'sale'"/>
                         </div>
                     </div>
                 </div>
@@ -90,12 +88,24 @@
                              <h4 class="bg-light p-2 border-start border-info border-4">4. ملخص الفوترة</h4>
                              <field name="order_line" widget="section_and_note_one2many" mode="list">
                                 <list readonly="1">
+                                    <field name="product_id" string="المنتج" readonly="1"/>
                                     <field name="name" string="الوصف"/>
                                     <field name="product_uom_qty" string="الكمية"/>
                                     <field name="price_unit" string="سعر الوحدة"/>
                                     <field name="price_subtotal" string="المجموع"/>
                                 </list>
                              </field>
+
+                             <!-- Bloc des totaux standard Odoo -->
+                             <group class="oe_subtotal_footer oe_right" colspan="2" name="sale_total">
+                                <field name="amount_untaxed" widget="monetary" string="المبلغ الصافي"/>
+                                <field name="amount_tax" widget="monetary" string="الضرائب"/>
+                                <div class="oe_subtotal_footer_separator oe_inline o_td_label">
+                                    <label for="amount_total" string="الإجمالي النهائي"/>
+                                </div>
+                                <field name="amount_total" nolabel="1" class="oe_subtotal_footer_separator" widget="monetary"/>
+                             </group>
+                             <div class="clearfix"/>
                         </div>
                     </page>
                     

@@ -64,7 +64,7 @@
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='company_type']" position="attributes">
-                <attribute name="invisible">1</attribute>
+                <attribute name="invisible">0</attribute>
             </xpath>
 
             <xpath expr="//field[@name='name']" position="attributes">
@@ -91,50 +91,62 @@
             </xpath>
 
             <xpath expr="//page[@name='contact_addresses']" position="attributes">
-                <attribute name="invisible">1</attribute>
+                <attribute name="invisible">0</attribute>
             </xpath>
 
+            <!-- Sections de l'onglet Ventes et Achats filtrées par type de partenaire -->
+            <xpath expr="//group[@name='sale']" position="attributes">
+                <attribute name="invisible">customer_rank == 0</attribute>
+            </xpath>
             <xpath expr="//group[@name='purchase']" position="attributes">
-                <attribute name="invisible">1</attribute>
+                <attribute name="invisible">supplier_rank == 0</attribute>
+                <attribute name="string">Achats / المشتريات</attribute>
             </xpath>
             <xpath expr="//group[@name='inventory']" position="attributes">
-                <attribute name="invisible">1</attribute>
+                <attribute name="invisible">supplier_rank == 0</attribute>
+                <attribute name="string">Inventaire / المخزن</attribute>
             </xpath>
             <xpath expr="//group[@name='point_of_sale']" position="attributes">
-                <attribute name="invisible">1</attribute>
+                <attribute name="invisible">customer_rank == 0</attribute>
             </xpath>
             
             <xpath expr="//field[@name='ref']" position="attributes">
-                <attribute name="invisible">1</attribute>
+                <attribute name="invisible">0</attribute>
             </xpath>
             <xpath expr="//field[@name='industry_id']" position="attributes">
-                <attribute name="invisible">1</attribute>
+                <attribute name="invisible">customer_rank == 0</attribute>
+                <attribute name="string">النشاط التجاري</attribute>
             </xpath>
             <xpath expr="//field[@name='website']" position="attributes">
-                <attribute name="invisible">1</attribute>
+                <attribute name="invisible">0</attribute>
+                <attribute name="string">الموقع الإلكتروني</attribute>
             </xpath>
             <xpath expr="//field[@name='property_payment_term_id']" position="attributes">
-                <attribute name="invisible">1</attribute>
+                <attribute name="invisible">0</attribute>
+                <attribute name="string">شروط الدفع</attribute>
             </xpath>
             <xpath expr="//field[@name='category_id']" position="attributes">
-                <attribute name="invisible">1</attribute>
+                <attribute name="invisible">0</attribute>
+                <attribute name="string">فئة الزبون</attribute>
             </xpath>
 
             <xpath expr="//page[@name='sales_purchases']" position="attributes">
-                <attribute name="invisible">1</attribute>
+                <attribute name="invisible">0</attribute>
+                <attribute name="string">البيع والشراء</attribute>
             </xpath>
 
             <xpath expr="//field[@name='mobile']" position="attributes">
-                <attribute name="invisible">1</attribute>
+                <attribute name="invisible">0</attribute>
             </xpath>
             <xpath expr="//field[@name='email']" position="attributes">
-                <attribute name="invisible">1</attribute>
+                <attribute name="invisible">0</attribute>
             </xpath>
             <xpath expr="//field[@name='lang']" position="attributes">
-                <attribute name="invisible">1</attribute>
+                <attribute name="invisible">0</attribute>
             </xpath>
             <xpath expr="//field[@name='vat']" position="attributes">
-                <attribute name="invisible">1</attribute>
+                <attribute name="invisible">0</attribute>
+                <attribute name="string">المعرف الجبائي</attribute>
             </xpath>
 
         </field>
@@ -163,14 +175,18 @@
             </xpath>
         </field>
     </record>
-    <!-- Héritage pour masquer le groupe Automatisation de Facturation (Compta) -->
+    <!-- Héritage pour réactiver la gestion comptable détaillée -->
     <record id="view_partner_account_form_inherit_travel" model="ir.ui.view">
         <field name="name">res.partner.account.form.travel</field>
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="account.view_partner_property_form"/>
         <field name="arch" type="xml">
+            <xpath expr="//page[@name='accounting']" position="attributes">
+                <attribute name="invisible">0</attribute>
+                <attribute name="string">المحاسبة</attribute>
+            </xpath>
             <xpath expr="//group[@name='accounting_automation']" position="attributes">
-                <attribute name="invisible">1</attribute>
+                <attribute name="invisible">0</attribute>
             </xpath>
         </field>
     </record>

@@ -4,9 +4,9 @@ from odoo import models, fields, api
 
 class TravelProSaharaCaisse(models.Model):
     _name = "travel_pro_sahara.caisse"
-    _description = "لوحة معلومات الصندوق العام"
+    _description = "لوحة معلومات الخزينة العامة"
 
-    name = fields.Char(default="الصندوق العام", readonly=True)
+    name = fields.Char(default="الخزينة العامة", readonly=True)
     company_currency_id = fields.Many2one("res.currency", default=lambda self: self.env.company.currency_id)
 
     # Filtres interactifs

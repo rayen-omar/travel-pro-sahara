@@ -4,159 +4,212 @@
         <field name="name">travel_pro_sahara.guide.form</field>
         <field name="model">travel_pro_sahara.guide</field>
         <field name="arch" type="xml">
-            <form string="دليل المستخدم الاحترافي" create="0" edit="0" delete="0">
+            <form string="دليل المستخدم الكامل — Travel Pro" create="0" edit="0" delete="0">
                 <sheet>
                     <style>
-                        /* Design Système Travel Pro */
-                        .tp_guide_wrapper {
-                            font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
-                            direction: rtl;
-                        }
-                        .tp_header {
-                            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/web/static/img/placeholder.png'); /* On peut mettre une image ici */
-                            background-color: #1a237e;
-                            background-size: cover;
-                            color: white;
-                            padding: 60px 20px;
-                            border-radius: 20px;
-                            text-align: center;
-                            margin-bottom: 40px;
-                            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-                        }
-                        .tp_process_title {
-                            font-size: 2.2em;
-                            font-weight: 900;
-                            color: #1a237e;
-                            text-align: center;
-                            margin-bottom: 40px;
-                            border-bottom: 3px solid #ffd600;
-                            display: table;
-                            margin-right: auto;
-                            margin-left: auto;
-                            padding-bottom: 10px;
-                        }
-                        .tp_grid {
-                            display: grid;
-                            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                            gap: 30px;
-                            padding: 10px;
-                        }
-                        .tp_card {
-                            background: #ffffff;
-                            border-radius: 15px;
-                            padding: 30px;
-                            border-right: 8px solid #3f51b5;
-                            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-                            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                            display: flex;
-                            gap: 20px;
-                        }
-                        .tp_card:hover {
-                            transform: translateY(-10px);
-                            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-                            border-right-color: #ffd600;
-                        }
-                        .tp_icon_circle {
-                            background: #e8eaf6;
-                            color: #1a237e;
-                            width: 60px;
-                            height: 60px;
-                            border-radius: 50%;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            font-size: 24px;
-                            flex-shrink: 0;
-                        }
-                        .tp_card_body h3 {
-                            color: #1a237e;
-                            font-weight: 800;
-                            margin: 0 0 10px 0;
-                            font-size: 1.4em;
-                        }
-                        .tp_card_body p {
-                            color: #546e7a;
-                            line-height: 1.6;
-                            margin: 0;
-                            font-size: 1.05em;
-                        }
-                        .tp_footer_tip {
-                            background: #fff9c4;
-                            border-right: 6px solid #fbc02d;
-                            padding: 25px;
-                            border-radius: 15px;
-                            margin-top: 50px;
-                            display: flex;
-                            align-items: center;
-                            gap: 20px;
-                        }
+                        .o_notebook .nav-tabs { border-right: 1px solid #dee2e6 !important; background: #f8fafc; padding: 10px !important; }
+                        .o_notebook .nav-link { margin-bottom: 5px !important; border-radius: 8px !important; font-weight: 600 !important; color: #475569 !important; text-align: right !important; padding: 12px 20px !important; }
+                        .o_notebook .nav-link.active { background: #1e40af !important; color: white !important; box-shadow: 0 4px 6px rgba(30, 64, 175, 0.2) !important; }
+                        .tp_section_content { padding: 30px; background: white; min-height: 500px; direction: rtl; font-family: 'Outfit', 'Segoe UI', sans-serif; }
+                        .tp_title_prof { font-size: 2.2em; color: #1e3a8a; font-weight: 800; border-bottom: 3px solid #fbbf24; padding-bottom: 15px; margin-bottom: 30px; }
+                        .tp_path_box { background: #f0f7ff; border-right: 5px solid #1e40af; padding: 12px 20px; border-radius: 4px 12px 12px 4px; margin-bottom: 25px; color: #1e40af; font-weight: bold; }
+                        .tp_img_prof { max-width: 650px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); margin: 20px auto 10px auto; display: block; }
+                        .tp_img_caption { text-align: center; font-size: 0.9em; color: #64748b; font-weight: bold; margin-bottom: 30px; display: block; }
+                        .tp_logic_mini { background: #0f172a; color: #fbbf24; padding: 20px; border-radius: 12px; text-align: center; font-size: 1.25em; font-weight: bold; margin: 20px 0; }
                     </style>
 
-                    <div class="tp_guide_wrapper">
-                        <!-- En-tête -->
-                        <div class="tp_header">
-                            <h1 style="font-size: 3.5em; font-weight: 900; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">TRAVEL PRO DASHBOARD</h1>
-                            <p style="font-size: 1.5em; opacity: 0.9;">نظامكم الذكي لإدارة الرحلات والتحصيل المالي بكل احترافية</p>
-                        </div>
-
-                        <h2 class="tp_process_title">دورة العمل (Business Workflow)</h2>
-
-                        <div class="tp_grid">
-                            <!-- Step 1 -->
-                            <div class="tp_card">
-                                <div class="tp_icon_circle"><i class="fa fa-user-plus"/></div>
-                                <div class="tp_card_body">
-                                    <h3>١. إدارة الزبائن</h3>
-                                    <p>ابدأ بتسجيل الملف الشخصي للزبون (Nom, Prénom, CIN). هذا سيسمح لك بتوليد قائمة الركاب آلياً في الحجوزات القادمة.</p>
-                                </div>
-                            </div>
-
-                            <!-- Step 2 -->
-                            <div class="tp_card" style="border-right-color: #5c6bc0;">
-                                <div class="tp_icon_circle"><i class="fa fa-map"/></div>
-                                <div class="tp_card_body">
-                                    <h3>٢. تصميم البرنامج</h3>
-                                    <p>أنشئ "رحلة" جديدة (Voyage). حدد خط السير اليومي والأسعار الأساسية. الرحلة تعمل كقالب (Template) لجميع حجوزاتك.</p>
-                                </div>
-                            </div>
-
-                            <!-- Step 3 -->
-                            <div class="tp_card" style="border-right-color: #3949ab;">
-                                <div class="tp_icon_circle"><i class="fa fa-calendar-check-o"/></div>
-                                <div class="tp_card_body">
-                                    <h3>٣. محرك الحجوزات</h3>
-                                    <p>اربط الزبون بالرحلة. هنا يمكنك تخصيص كل شيء: (الفنادق، النقل، المعدات). سيقوم النظام بحساب السعر الإجمالي تلقائياً.</p>
-                                </div>
-                            </div>
-
-                            <!-- Step 4 -->
-                            <div class="tp_card" style="border-right-color: #283593;">
-                                <div class="tp_icon_circle"><i class="fa fa-file-text-o"/></div>
-                                <div class="tp_card_body">
-                                    <h3>٤. الفوترة الآلية</h3>
-                                    <p>بضغطة زر واحدة، قم بتوليد عرض سعر (Quotation) أو فاتورة. يتم ترحيل البيانات المالية مباشرة إلى قسم المحاسبة.</p>
-                                </div>
-                            </div>
-
-                            <!-- Step 5 -->
-                            <div class="tp_card" style="border-right-color: #1a237e;">
-                                <div class="tp_icon_circle"><i class="fa fa-dashboard"/></div>
-                                <div class="tp_card_body">
-                                    <h3>٥. الشفافية المالية</h3>
-                                    <p>راقب التحصيلات عبر "الصندوق العام". قارن بين المبالغ المستلمة والمتبقية في لوحة التحكم التفاعلية.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Tip -->
-                        <div class="tp_footer_tip">
-                            <i class="fa fa-lightbulb-o" style="font-size: 2.5em; color: #fbc02d;"/>
-                            <div>
-                                <h4 style="margin: 0 0 5px 0; font-weight: 800;">تنبيه الأداء:</h4>
-                                <p style="margin: 0; color: #5d4037;">دائماً ابدأ بتأكيد الحجز (Confirmer) قبل إنشاء الفاتورة لضمان حجز المقاعد في الرحلة بشكل صحيح.</p>
-                            </div>
-                        </div>
+                    <div style="background: #1e3a8a; padding: 25px; border-radius: 12px; margin-bottom: 20px; text-align: center; color: white;">
+                        <h3 style="margin:0; color:#bcaaa4; font-weight: 800; letter-spacing: 2px;">STE SAHARA D'EQUIPEMENT GENERALE</h3>
+                        <h1 style="color: #fbbf24; margin: 10px 0 0 0; font-weight: 900;">دليل المستخدم الكامل — Travel Pro</h1>
+                        <p style="margin: 5px 0 0 0; opacity: 0.9;">دليلك الشامل لإدارة وكالتك السياحية بأعلى المعايير الاحترافية</p>
                     </div>
+
+                    <notebook vertical="1">
+                        
+                        <page string="مبدأ عمل التطبيق" name="page_intro">
+                            <div class="tp_section_content">
+                                <h1 class="tp_title_prof">مبدأ عمل التطبيق</h1>
+                                <p class="tp_desc_text" style="font-size:1.1em; line-height:1.8;">Travel Pro هو نظام إدارة متكامل لوكالات السفر مبني على Odoo. يسير العمل فيه وفق تسلسل منطقي يضمن عدم ضياع أي معلومة :</p>
+                                <div class="tp_logic_mini">
+                                    الزبون ⬅ الرحلة ⬅ الحجز ⬅ الفاتورة ⬅ الدفع ⬅ الخزينة
+                                </div>
+                                <div style="background: #fffbeb; padding: 20px; border-radius: 12px; border: 1px solid #fde68a; margin-top: 30px;">
+                                    <h4 style="color: #92400e;">💡 ملاحظة هامة:</h4>
+                                    <p style="margin:0; color: #b45309;">تأكد دائماً من صحة البيانات في الخطوات الأولى (الزبون والرحلة) لأنها ستنتقل آلياً لبقية النظام.</p>
+                                </div>
+                            </div>
+                        </page>
+
+                        <page string="1. إنشاء الزبون" name="page_customer">
+                            <div class="tp_section_content">
+                                <h1 class="tp_title_prof">1. إدخل بيانات الزبون</h1>
+                                <div class="tp_path_box">📍 المسار : تطبيق الزبائن ⬅ زر [ جديد ]</div>
+                                <img src="/travel_pro_sahara/static/description/guide_client.png" class="tp_img_prof"/>
+                                <span class="tp_img_caption">(صورة توضح واجهة إدخال بيانات الزبون الشخصية والمحاسبية)</span>
+                                <p class="tp_desc_text" style="font-size:1.1em; line-height:1.8;">
+                                    ابدأ بإدخال الاسم، الهاتف، ومستندات الهوية. تأكد من تحديد نوع الزبون (فرد أو شركة).
+                                </p>
+                            </div>
+                        </page>
+
+                        <page string="2. إنشاء الرحلة" name="page_voyage">
+                            <div class="tp_section_content">
+                                <h1 class="tp_title_prof">2. تعريف الرحلة السياحية</h1>
+                                <div class="tp_path_box">📍 المسار : تطبيق الرحلات ⬅ زر [ جديد ]</div>
+                                <img src="/travel_pro_sahara/static/description/guide_voyage.png" class="tp_img_prof"/>
+                                <span class="tp_img_caption">(واجهة إدخال مواصفات الرحلة وتاريخ انطلاقها وتسعيرها)</span>
+                                <p class="tp_desc_text" style="font-size:1.1em; line-height:1.8;">
+                                    هنا تضع تفاصيل رحلتك (الوجهات، الفنادق، سعر البالغ وسعر الطفل).
+                                </p>
+                            </div>
+                        </page>
+
+                        <page string="3. إنشاء الحجز" name="page_reservation">
+                            <div class="tp_section_content">
+                                <h1 class="tp_title_prof">3. إدارة الحجوزات</h1>
+                                <div class="tp_path_box">📍 المسار : تطبيق الحجوزات ⬅ زر [ جديد ]</div>
+                                <img src="/travel_pro_sahara/static/description/guide_reservation.png" class="tp_img_prof"/>
+                                <span class="tp_img_caption">(عرض لربط الزبون برحلة معينة وتوثيق قائمة الركاب)</span>
+                                <p class="tp_desc_text" style="font-size:1.1em; line-height:1.8;">
+                                    هذا العصب الأساسي للوكالة، حيث يتم حجز الأماكن وربط المسافرين بالبرنامج السياحي.
+                                </p>
+                            </div>
+                        </page>
+
+                        <page string="4. المالية والفوترة" name="page_invoice">
+                            <div class="tp_section_content">
+                                <h1 class="tp_title_prof">4. الفوترة والتحصيل المالي</h1>
+                                <p class="tp_desc_text" style="font-size:1.1em; line-height:1.8;">إرسال الفواتير ومتابعة ديون الزبائن بالدينار أو العملات الصعبة.</p>
+                                
+                                <div style="display: flex; gap: 20px; align-items: start;">
+                                    <div style="flex:1;">
+                                        <img src="/travel_pro_sahara/static/description/guide_invoice_01.png" style="width:100%; border-radius:10px; border:1px solid #ddd;"/>
+                                        <span class="tp_img_caption">(زر إنشاء عرض السعر الأولي)</span>
+                                    </div>
+                                    <div style="flex:1;">
+                                        <img src="/travel_pro_sahara/static/description/guide_invoice_02.png" style="width:100%; border-radius:10px; border:1px solid #ddd;"/>
+                                        <span class="tp_img_caption">(زر تأكيد وتحويل الحجز إلى فاتورة قانونية)</span>
+                                    </div>
+                                </div>
+
+                                <img src="/travel_pro_sahara/static/description/guide_invoice_03.png" class="tp_img_prof"/>
+                                <span class="tp_img_caption">(نموذج الفاتورة النهائية الجاهزة للطباعة مع شعار Sahara Pro)</span>
+                                <p class="tp_desc_text" style="font-size:1.1em; line-height:1.8;">الفاتورة تسحب بياناتها آلياً من الحجز لضمان عدم وجود أخطاء في المبالغ.</p>
+                            </div>
+                        </page>
+
+                        <page string="5. تسجيل الدفع" name="page_payment">
+                            <div class="tp_section_content">
+                                <h1 class="tp_title_prof">5. تسجيل مبالغ الدفع</h1>
+                                <div class="tp_path_box">📍 المسار : داخل الفاتورة ⬅ زر [ تسجيل الدفع ]</div>
+                                
+                                <img src="/travel_pro_sahara/static/description/guide_payment.png" class="tp_img_prof"/>
+                                <span class="tp_img_caption">(نافذة تأكيد المبالغ المستلمة واختيار الصندوق أو البنك)</span>
+                                <p class="tp_desc_text" style="font-size:1.1em; line-height:1.8;">هنا تثبت استلامك للمال وتحول الفاتورة إلى حالة "مدفوعة".</p>
+                            </div>
+                        </page>
+
+                        <page string="6. الخزينة العامة" name="page_caisse">
+                            <div class="tp_section_content">
+                                <h1 class="tp_title_prof">6. الخزينة والسيولة النقدية</h1>
+                                <div class="tp_path_box">📍 المسار : تطبيق الخزينة العامة</div>
+                                
+                                <img src="/travel_pro_sahara/static/description/guide_caisse.png" class="tp_img_prof"/>
+                                <span class="tp_img_caption">(لوحة مراقبة الأرصدة المالية الحالية في الصناديق والبنك)</span>
+                                <p class="tp_desc_text" style="font-size:1.1em; line-height:1.8;">تتبع الأرقام الحقيقية المتاحة في خزينة وكالتكم في أي لحظة.</p>
+                            </div>
+                        </page>
+
+                        <page string="7. مشتريات الخدمات" name="page_services">
+                            <div class="tp_section_content">
+                                <h1 class="tp_title_prof">7. المشتريات وشؤون الموردين</h1>
+                                <p class="tp_desc_text" style="font-size:1.1em; line-height:1.8;">تنظيم مديونية الفنادق والمطاعم وشركات النقل.</p>
+                                
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                    <div>
+                                        <img src="/travel_pro_sahara/static/description/guide_purchase_01.png" style="width:100%; border-radius:10px; border:1px solid #ddd;"/>
+                                        <span class="tp_img_caption">(تحديد الخدمات المطلوبة كمنتج شرائي)</span>
+                                    </div>
+                                    <div>
+                                        <img src="/travel_pro_sahara/static/description/guide_purchase_02.png" style="width:100%; border-radius:10px; border:1px solid #ddd;"/>
+                                        <span class="tp_img_caption">(إنشاء ملف المورد (فندق/ناقل) وبياناته)</span>
+                                    </div>
+                                    <div>
+                                        <img src="/travel_pro_sahara/static/description/guide_purchase_03.png" style="width:100%; border-radius:10px; border:1px solid #ddd;"/>
+                                        <span class="tp_img_caption">(إصدار أمر الشراء الرسمي للمورد)</span>
+                                    </div>
+                                    <div>
+                                        <img src="/travel_pro_sahara/static/description/guide_purchase_04.png" style="width:100%; border-radius:10px; border:1px solid #ddd;"/>
+                                        <span class="tp_img_caption">(تدقيق فاتورة المورد النهائية قبل الدفع)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </page>
+
+                        <page string="8. المخزن والسلع" name="page_stock">
+                            <div class="tp_section_content">
+                                <h1 class="tp_title_prof">8. السلع المادية (المخزن)</h1>
+                                <p class="tp_desc_text" style="font-size:1.1em; line-height:1.8;">تتبع جرد المشروبات، الهدايا، ومعدات الرحلات.</p>
+                                
+                                <img src="/travel_pro_sahara/static/description/guide_stock_01.png" class="tp_img_prof" style="max-width:400px;"/>
+                                <span class="tp_img_caption">(تعريف المنتج كسلعة مخزنية (Stockable Product))</span>
+
+                                <div style="display: flex; gap: 10px;">
+                                    <div style="flex:1;">
+                                        <img src="/travel_pro_sahara/static/description/guide_stock_02.png" style="width:100%; border-radius:10px;"/>
+                                        <span class="tp_img_caption">(عملية استلام الشحنة)</span>
+                                    </div>
+                                    <div style="flex:1;">
+                                        <img src="/travel_pro_sahara/static/description/guide_stock_03.png" style="width:100%; border-radius:10px;"/>
+                                        <span class="tp_img_caption">(تأكيد الكمية المستلمة)</span>
+                                    </div>
+                                </div>
+                                <img src="/travel_pro_sahara/static/description/guide_stock_05.png" style="width:100%; border-radius:10px; border:1px solid #ddd;"/>
+                                <span class="tp_img_caption">(سجل جرد حركات المخزن: كل دخل وخرج موثق بالوقت)</span>
+                            </div>
+                        </page>
+
+                        <page string="9. المحاسبة والعملات" name="page_accounting">
+                            <div class="tp_section_content">
+                                <h1 class="tp_title_prof">9. المحاسبة والعملات</h1>
+                                <p class="tp_desc_text" style="font-size:1.1em; line-height:1.8;">مراقبة الدفاتر اليومية وإعداد أسعار صرف العملات الصعبة.</p>
+                                <img src="/travel_pro_sahara/static/description/guide_accounting_01.png" class="tp_img_prof" style="max-width:300px;"/>
+                                <span class="tp_img_caption">(قائمة الوظائف المحاسبية المتوفرة في Sahara Pro)</span>
+
+                                <img src="/travel_pro_sahara/static/description/guide_accounting_02.png" class="tp_img_prof"/>
+                                <span class="tp_img_caption">(إدارة دفاتر اليومية الخاصة بالفواتير والمصروفات)</span>
+                                
+                                <img src="/travel_pro_sahara/static/description/guide_accounting_03.png" class="tp_img_prof"/>
+                                <span class="tp_img_caption">(واجهة إعدادات الدفاتر المحاسبية)</span>
+                            </div>
+                        </page>
+
+                        <page string="11. عناصر اليومية" name="page_journal">
+                            <div class="tp_section_content">
+                                <h1 class="tp_title_prof">11. السجل المحاسبي (مدين/دائن)</h1>
+                                <p class="tp_desc_text" style="font-size:1.1em; line-height:1.8;">⚠️ للخبراء المحاسبين: تتبع توازن القيود المحاسبية لكل عملية.</p>
+                                <img src="/travel_pro_sahara/static/description/guide_journal_01.png" class="tp_img_prof" style="max-width:500px;"/>
+                                <span class="tp_img_caption">(الوصول لزر قيود اليومية من إعدادات الصندوق)</span>
+
+                                <img src="/travel_pro_sahara/static/description/guide_journal_02.png" style="width:100%; border:1px solid #cbd5e1; border-radius:8px;"/>
+                                <span class="tp_img_caption">(عرض تفصيلي لأسطر اليومية - Anasir el Yaoumia)</span>
+                            </div>
+                        </page>
+
+                        <page string="تحية الفريق" name="page_summary">
+                            <div class="tp_section_content" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); text-align:center; display:flex; flex-direction:column; justify-content:center; align-items:center;">
+                                <div style="font-size: 5em; margin-bottom: 20px;">🌟</div>
+                                <h1 style="color:#1e3a8a; font-size: 3em; font-weight: 900;">تهانينا!</h1>
+                                <p style="font-size: 1.5em; color: #475569; max-width: 700px; line-height: 1.8;">لقد أكملت استعراض الدليل الشامل. تتمنى لكم شركتنا رحلات موفقة وإرادة قوية!</p>
+                                <div style="font-size: 1.8em; color: #1e3a8a; padding: 30px; border-radius: 20px; background: white; margin-top: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                                    الزبون ⬅ الرحلة ⬅ الحجز ⬅ الفاتورة ⬅ الدفع ⬅ الخزينة
+                                </div>
+                                <div style="margin-top: 50px; padding: 20px 40px; background: #795548; border-radius: 15px; color: white; display: inline-block;">
+                                    <h3 style="margin:0; font-weight: 800;">STE SAHARA D'EQUIPEMENT GENERALE</h3>
+                                </div>
+                            </div>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
