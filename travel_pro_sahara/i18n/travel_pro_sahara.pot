@@ -1,0 +1,2164 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* travel_pro_sahara
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-29 10:15+0000\n"
+"PO-Revision-Date: 2026-04-29 10:15+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "1. إدخل بيانات الزبون"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "1. إنشاء الزبون"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_order_form_inherit_travel_v2
+msgid "1. قائمة الركاب والمشاركين"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "11. السجل المحاسبي (مدين/دائن)"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "11. عناصر اليومية"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "2. إنشاء الرحلة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_order_form_inherit_travel_v2
+msgid "2. الإقامة والفنادق"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "2. تعريف الرحلة السياحية"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "3. إدارة الحجوزات"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "3. إنشاء الحجز"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_order_form_inherit_travel_v2
+msgid "3. وسائل النقل"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "4. الفوترة والتحصيل المالي"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "4. المالية والفوترة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_order_form_inherit_travel_v2
+msgid "4. ملخص الفوترة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "5. تسجيل الدفع"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "5. تسجيل مبالغ الدفع"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "6. الخزينة العامة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "6. الخزينة والسيولة النقدية"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "7. المشتريات وشؤون الموردين"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "7. مشتريات الخدمات"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "8. السلع المادية (المخزن)"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "8. المخزن والسلع"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "9. المحاسبة والعملات"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_statistic_form
+msgid "<i class=\"fa fa-clock-o me-1\"/> آخر تحديث:"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_order_form_inherit_travel_v2
+msgid ""
+"<i class=\"fa fa-info-circle me-1\"/> يتم سحب هذه المعلومات تلقائياً من نظام"
+" الحجوزات"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_kanban
+msgid "<i class=\"fa fa-plane me-1\" title=\"Voyage\"/>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_kanban
+msgid "<i class=\"fa fa-user me-1\" title=\"Client\"/>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_kanban
+msgid "<i class=\"fa fa-users me-1\" title=\"Passagers\"/>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_statistic_form
+msgid "<span class=\"card_label\">إجمالي الحجوزات</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_statistic_form
+msgid "<span class=\"card_label\">إجمالي الزبائن</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_statistic_form
+msgid "<span class=\"card_label\">الرحلات النشطة</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_statistic_form
+msgid "<span class=\"card_label\">الفنادق المبرمجة</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_statistic_form
+msgid "<span class=\"card_label\">المرشدين المتعاقدين</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_statistic_form
+msgid "<span class=\"card_label\">المطاعم والوجبات</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_statistic_form
+msgid "<span class=\"card_label\">عمليات النقل</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_form
+msgid "<span class=\"mx-2\">إلى</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_form
+msgid "<span class=\"o_stat_text\">الحجوزات</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+msgid "<span class=\"o_stat_text\">الفواتير</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+msgid "<span class=\"o_stat_text\">عروض أسعار</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid ""
+"<span class=\"tp_img_caption\">(إدارة دفاتر اليومية الخاصة بالفواتير "
+"والمصروفات)</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "<span class=\"tp_img_caption\">(إصدار أمر الشراء الرسمي للمورد)</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid ""
+"<span class=\"tp_img_caption\">(إنشاء ملف المورد (فندق/ناقل) "
+"وبياناته)</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid ""
+"<span class=\"tp_img_caption\">(الوصول لزر قيود اليومية من إعدادات "
+"الصندوق)</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "<span class=\"tp_img_caption\">(تأكيد الكمية المستلمة)</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "<span class=\"tp_img_caption\">(تحديد الخدمات المطلوبة كمنتج شرائي)</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid ""
+"<span class=\"tp_img_caption\">(تدقيق فاتورة المورد النهائية قبل "
+"الدفع)</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid ""
+"<span class=\"tp_img_caption\">(تعريف المنتج كسلعة مخزنية (Stockable "
+"Product))</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "<span class=\"tp_img_caption\">(زر إنشاء عرض السعر الأولي)</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid ""
+"<span class=\"tp_img_caption\">(زر تأكيد وتحويل الحجز إلى فاتورة "
+"قانونية)</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid ""
+"<span class=\"tp_img_caption\">(سجل جرد حركات المخزن: كل دخل وخرج موثق "
+"بالوقت)</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid ""
+"<span class=\"tp_img_caption\">(صورة توضح واجهة إدخال بيانات الزبون الشخصية "
+"والمحاسبية)</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid ""
+"<span class=\"tp_img_caption\">(عرض تفصيلي لأسطر اليومية - Anasir el "
+"Yaoumia)</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid ""
+"<span class=\"tp_img_caption\">(عرض لربط الزبون برحلة معينة وتوثيق قائمة "
+"الركاب)</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "<span class=\"tp_img_caption\">(عملية استلام الشحنة)</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid ""
+"<span class=\"tp_img_caption\">(قائمة الوظائف المحاسبية المتوفرة في Sahara "
+"Pro)</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid ""
+"<span class=\"tp_img_caption\">(لوحة مراقبة الأرصدة المالية الحالية في "
+"الصناديق والبنك)</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid ""
+"<span class=\"tp_img_caption\">(نافذة تأكيد المبالغ المستلمة واختيار الصندوق"
+" أو البنك)</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid ""
+"<span class=\"tp_img_caption\">(نموذج الفاتورة النهائية الجاهزة للطباعة مع "
+"شعار Sahara Pro)</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid ""
+"<span class=\"tp_img_caption\">(واجهة إدخال مواصفات الرحلة وتاريخ انطلاقها "
+"وتسعيرها)</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "<span class=\"tp_img_caption\">(واجهة إعدادات الدفاتر المحاسبية)</span>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_form
+msgid "<strong>المرجع: </strong>"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_client_form
+msgid "Achats / المشتريات"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_destination__adresse
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_hotel__adresse
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_restauration__adresse
+msgid "Adresse"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_destination_form
+msgid "Adresse complète..."
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields.selection,name:travel_pro_sahara.selection__travel_pro_sahara_reservation_passager__type_place__adulte
+msgid "Adulte"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__auto_state_updater
+msgid "Auto State Updater"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields.selection,name:travel_pro_sahara.selection__travel_pro_sahara_voyage_restauration__type_repas__autre
+#: model:ir.model.fields.selection,name:travel_pro_sahara.selection__travel_pro_sahara_voyage_transport__type_transport__autre
+msgid "Autre"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields.selection,name:travel_pro_sahara.selection__travel_pro_sahara_voyage_transport__type_transport__avion
+msgid "Avion"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields.selection,name:travel_pro_sahara.selection__travel_pro_sahara_voyage_transport__type_transport__bateau
+msgid "Bateau"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields.selection,name:travel_pro_sahara.selection__travel_pro_sahara_voyage_transport__type_transport__bus
+msgid "Bus"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_hotel__check_in
+msgid "Check-in"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_hotel__check_out
+msgid "Check-out"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_guide__client_id
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_hotel__client_id
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_jour__client_id
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_restauration__client_id
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_transport__client_id
+msgid "Client"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_destination__code_postal
+msgid "Code postal"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_caisse__company_currency_id
+msgid "Company Currency"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_destination_form
+msgid "Configuration"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model,name:travel_pro_sahara.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_caisse__create_uid
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_destination__create_uid
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_guide__create_uid
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__create_uid
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation_passager__create_uid
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_statistic__create_uid
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage__create_uid
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_equipement__create_uid
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_guide__create_uid
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_hotel__create_uid
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_jour__create_uid
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_restauration__create_uid
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_transport__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_caisse__create_date
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_destination__create_date
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_guide__create_date
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__create_date
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation_passager__create_date
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_statistic__create_date
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage__create_date
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_equipement__create_date
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_guide__create_date
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_hotel__create_date
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_jour__create_date
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_restauration__create_date
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_transport__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.actions.act_window,help:travel_pro_sahara.action_account_journal_travel
+msgid "Créez vos journaux (Banque, Caisse, etc.) !"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_jour__description
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_transport__description
+msgid "Description"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_jour__destination_id
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_destination_form
+msgid "Destination"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model,name:travel_pro_sahara.model_travel_pro_sahara_destination
+msgid "Destination (étape d'un voyage)"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_caisse__display_name
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_destination__display_name
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_guide__display_name
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__display_name
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation_passager__display_name
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_statistic__display_name
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage__display_name
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_equipement__display_name
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_guide__display_name
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_hotel__display_name
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_jour__display_name
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_restauration__display_name
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_transport__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_kanban
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_kanban
+msgid "Dropdown menu"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields.selection,name:travel_pro_sahara.selection__travel_pro_sahara_voyage_restauration__type_repas__dejeuner
+msgid "Déjeuner"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields.selection,name:travel_pro_sahara.selection__travel_pro_sahara_voyage_restauration__type_repas__diner
+msgid "Dîner"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields.selection,name:travel_pro_sahara.selection__travel_pro_sahara_reservation_passager__type_place__enfant
+msgid "Enfant"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.actions.act_window,help:travel_pro_sahara.action_account_payment_travel
+msgid "Enregistrez vos paiements ici."
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_destination_form
+msgid "Ex: Hammamet, Djerba..."
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.actions.act_window,name:travel_pro_sahara.action_facture_travel
+msgid "Factures de Réservation"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model,name:travel_pro_sahara.model_travel_pro_sahara_voyage_guide
+msgid "Guide du voyage"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model,name:travel_pro_sahara.model_travel_pro_sahara_voyage_hotel
+msgid "Hôtel du voyage"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_caisse__id
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_destination__id
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_guide__id
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__id
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation_passager__id
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_statistic__id
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage__id
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_equipement__id
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_guide__id
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_hotel__id
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_jour__id
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_restauration__id
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_transport__id
+msgid "ID"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_client_form
+msgid "Inventaire / المخزن"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_transport__jour
+msgid "Jour"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model,name:travel_pro_sahara.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.actions.act_window,name:travel_pro_sahara.action_account_journal_travel
+msgid "Journaux Comptables"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_caisse__write_uid
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_destination__write_uid
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_guide__write_uid
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__write_uid
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation_passager__write_uid
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_statistic__write_uid
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage__write_uid
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_equipement__write_uid
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_guide__write_uid
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_hotel__write_uid
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_jour__write_uid
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_restauration__write_uid
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_transport__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_caisse__write_date
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_destination__write_date
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_guide__write_date
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__write_date
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation_passager__write_date
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_statistic__write_date
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage__write_date
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_equipement__write_date
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_guide__write_date
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_hotel__write_date
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_jour__write_date
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_restauration__write_date
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_transport__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_transport__lieu_arrive
+msgid "Lieu d'arrivée"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_transport__lieu_depart
+msgid "Lieu de départ"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_destination_form
+msgid "Localisation"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_caisse__name
+msgid "Name"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_hotel__nom_hotel
+msgid "Nom de l'hôtel"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_guide__nom_guide
+msgid "Nom du guide"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation_passager__nom_passager
+msgid "Nom du passager"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_restauration__nom_restaurant
+msgid "Nom du restaurant"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_jour__numero_jour
+msgid "N° jour"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_destination__sequence
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_transport__sequence
+msgid "Ordre"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.actions.act_window,name:travel_pro_sahara.action_account_payment_travel
+msgid "Paiements"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model,name:travel_pro_sahara.model_travel_pro_sahara_reservation_passager
+msgid "Passager (réservation)"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_caisse__payment_ids
+msgid "Payment"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model,name:travel_pro_sahara.model_account_payment
+msgid "Payments"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_destination__pays
+msgid "Pays"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields.selection,name:travel_pro_sahara.selection__travel_pro_sahara_voyage_restauration__type_repas__petit_dejeuner
+msgid "Petit-déjeuner"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_guide__prix
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_restauration__prix
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_transport__prix
+msgid "Prix"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_hotel__prix_nuit
+msgid "Prix / nuit"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model,name:travel_pro_sahara.model_travel_pro_sahara_voyage_jour
+msgid "Programme jour par jour du voyage"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model,name:travel_pro_sahara.model_travel_pro_sahara_voyage_restauration
+msgid "Restauration du voyage"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation_passager__reservation_id
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_guide__reservation_id
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_hotel__reservation_id
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_jour__reservation_id
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_restauration__reservation_id
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_transport__reservation_id
+msgid "Réservation"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_account_bank_statement_line__reservation_id
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_account_move__reservation_id
+msgid "Réservation Source"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "STE SAHARA D'EQUIPEMENT GENERALE"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model,name:travel_pro_sahara.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_statistic_form
+msgid "TRAVEL PRO"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields.selection,name:travel_pro_sahara.selection__travel_pro_sahara_voyage_transport__type_transport__train
+msgid "Train"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model,name:travel_pro_sahara.model_travel_pro_sahara_voyage_transport
+msgid "Transport du voyage"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_travelprosaara_root
+msgid "Travel Pro"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid ""
+"Travel Pro هو نظام إدارة متكامل لوكالات السفر مبني على Odoo. يسير العمل فيه "
+"وفق تسلسل منطقي يضمن عدم ضياع أي معلومة :"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation_passager__type_place
+msgid "Type"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_restauration__type_repas
+msgid "Type de repas"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_transport__type_transport
+msgid "Type transport"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_guide__telephone
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_hotel__telephone
+msgid "Téléphone"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_destination__ville
+msgid "Ville"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_destination_form
+msgid "Ville de Destination"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields.selection,name:travel_pro_sahara.selection__travel_pro_sahara_voyage_transport__type_transport__voiture
+msgid "Voiture"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_destination__voyage_id
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_guide__voyage_id
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_hotel__voyage_id
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_jour__voyage_id
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_restauration__voyage_id
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_transport__voyage_id
+msgid "Voyage"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation_passager__age
+msgid "Âge"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_statistic__last_refresh
+msgid "آخر تحديث"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.actions.act_window,help:travel_pro_sahara.action_client
+msgid "أضف أول زبون لك!"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.actions.act_window,help:travel_pro_sahara.action_vendor_travel
+msgid "أضف أول مورد لك!"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_order_form_inherit_travel_v2
+msgid "أضف هنا أي شروط خاصة للرحلة أو ملاحظات للزبون..."
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.actions.act_window,name:travel_pro_sahara.action_orders_travel_pro
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_sale_order
+msgid "أوامر البيع"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_statistic__total_revenu
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_statistic_form
+msgid "إجمالي الإيرادات"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_statistic__total_reservations
+msgid "إجمالي الحجوزات"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__prix_calcule
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_list
+msgid "إجمالي السعر"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_statistic_form
+msgid "إحصائيات الخدمات واللوجستيات"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_product_template
+msgid "إدارة المنتجات"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_form
+msgid "إرجاع إلى مسودة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "إرسال الفواتير ومتابعة ديون الزبائن بالدينار أو العملات الصعبة."
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_form
+msgid "إلغاء"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+msgid "إلغاء الحجز"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_caisse_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_order_form_inherit_travel_v2
+msgid "إلى"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+msgid "إنشاء عرض سعر"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+msgid "إنشاء فاتورة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid ""
+"ابدأ بإدخال الاسم، الهاتف، ومستندات الهوية. تأكد من تحديد نوع الزبون (فرد أو"
+" شركة)."
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,help:travel_pro_sahara.field_travel_pro_sahara_voyage_equipement__product_id
+msgid "اختر منتجاً من القائمة أو أضف اسماً يدوياً أدناه"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_order_form_inherit_travel_v2
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_passager_list
+msgid "اسم الراكب"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage__name
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_list
+msgid "اسم الرحلة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_client_form
+msgid "اسم الزبون..."
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_hotel_list
+msgid "اسم الفندق"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_guide_list
+msgid "اسم المرشد"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_restauration_list
+msgid "اسم المطعم"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_equipement_list
+msgid "اسم المعدة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_equipement__nom_equipement
+msgid "اسم المعدة / التفاصيل"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_caisse_form
+msgid "الإجمالي"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_order_form_inherit_travel_v2
+msgid "الإجمالي النهائي"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_statistic__name
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_client_form
+msgid "الاسم"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_res_partner__prenom
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_res_users__prenom
+msgid "الاسم الأول"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_client_tree
+msgid "الاسم الكامل"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_client_form
+msgid "الاسم..."
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_transport_list
+msgid "الانطلاق"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_list
+msgid "الباقي"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_client_tree
+msgid "البريد الإلكتروني"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_caisse_form
+msgid "البنك"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_client_form
+msgid "البيع والشراء"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_caisse_form
+msgid "التاريخ"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_form
+msgid "التسعير"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_stock_inventory
+msgid "الجرد الفعلي"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__state
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage__state
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_caisse_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_list
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_list
+msgid "الحالة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model,name:travel_pro_sahara.model_travel_pro_sahara_reservation
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_equipement__reservation_id
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_equipement_list
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_guide_list
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_hotel_list
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_jour_list
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_restauration_list
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_transport_list
+msgid "الحجز"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_sale_order__reservation_id
+msgid "الحجز المرتبط"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.actions.act_window,name:travel_pro_sahara.action_reservation
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage__reservation_count
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_reservation
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_list
+msgid "الحجوزات"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_bank_accounts
+msgid "الحسابات البنكية"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+msgid "الخروج"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_caisse
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_caisse_form
+msgid "الخزينة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.actions.server,name:travel_pro_sahara.action_caisse_travel_server
+msgid "الخزينة Travel Pro"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_caisse_form
+msgid "الخزينة العامة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+msgid "الدخول"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_form
+msgid "الدولة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.actions.act_window,name:travel_pro_sahara.action_voyage
+#: model:ir.model,name:travel_pro_sahara.model_travel_pro_sahara_voyage
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_voyage
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_list
+msgid "الرحلات"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_statistic__total_voyages_actifs
+msgid "الرحلات النشطة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_sale_order__voyage_id_from_reservation
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__voyage_id
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_equipement__voyage_id
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_list
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_equipement_list
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_guide_list
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_hotel_list
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_jour_list
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_restauration_list
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_transport_list
+msgid "الرحلة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_caisse__solde_total
+msgid "الرصيد الإجمالي"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__reservation_passager_ids
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_list
+msgid "الركاب"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_sale_order__reservation_passager_ids_related
+msgid "الركاب والمشاركين"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_form
+msgid "الرمز البريدي"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.actions.act_window,name:travel_pro_sahara.action_client
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_client_root
+msgid "الزبائن"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__client_id
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_equipement__client_id
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_order_form_inherit_travel_v2
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_list
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_equipement_list
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_guide_list
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_hotel_list
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_jour_list
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_restauration_list
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_transport_list
+msgid "الزبون"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "الزبون ⬅ الرحلة ⬅ الحجز ⬅ الفاتورة ⬅ الدفع ⬅ الخزينة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_caisse_form
+msgid "السجل الكامل وتصدير"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_equipement__prix
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_equipement_list
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_guide_list
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_restauration_list
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_transport_list
+msgid "السعر"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_graph
+msgid "السعر المحسوب"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_order_form_inherit_travel_v2
+msgid "السعر لليلة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_caisse_form
+msgid "الشريك"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage__photo_voyage
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_client_tree
+msgid "الصورة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_order_form_inherit_travel_v2
+msgid "الضرائب"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_order_form_inherit_travel_v2
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_passager_list
+msgid "العمر"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_currency
+msgid "العملات"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_guide__name
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_client_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_restauration_list
+msgid "العنوان"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_stock_category
+msgid "الفئات"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "الفاتورة تسحب بياناتها آلياً من الحجز لضمان عدم وجود أخطاء في المبالغ."
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_caisse_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_form
+msgid "الفترة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.actions.act_window,name:travel_pro_sahara.action_voyage_hotel
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_sale_order__reservation_hotel_ids_related
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__reservation_hotel_ids
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_statistic__total_hotel
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_voyage_hotel
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_hotel_list
+msgid "الفنادق"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_order_form_inherit_travel_v2
+msgid "الفندق"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__invoice_ids
+msgid "الفواتير"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_equipement__quantite
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_order_form_inherit_travel_v2
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_equipement_list
+msgid "الكمية"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_res_partner__nom
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_res_users__nom
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_client_form
+msgid "اللقب"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_client_form
+msgid "اللقب..."
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_logistique_root
+msgid "اللوجستيات"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_statistic__total_encaisse
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_statistic_form
+msgid "المبالغ المحصلة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_caisse_form
+msgid "المبلغ"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_order_form_inherit_travel_v2
+msgid "المبلغ الصافي"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__montant_paye
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_list
+msgid "المبلغ المدفوع"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_statistic_form
+msgid "المتبقي غير المحصل"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__reste_a_payer
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_statistic__total_reste_apayer
+msgid "المتبقي للدفع"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_order_form_inherit_travel_v2
+msgid "المجموع"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_accounting_root
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_partner_account_form_inherit_travel
+msgid "المحاسبة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_stock_root
+msgid "المخزن"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_form
+msgid "المدينة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__name
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage__reference
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_list
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_list
+msgid "المرجع"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.actions.act_window,name:travel_pro_sahara.action_voyage_guide
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__reservation_guide_ids
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_statistic__total_guide
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_voyage_guide
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_guide_list
+msgid "المرشدين"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_stock_warehouse
+msgid "المستودعات"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_purchase_root
+msgid "المشتريات"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.actions.act_window,name:travel_pro_sahara.action_voyage_restauration
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__reservation_restauration_ids
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_statistic__total_restauration
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_voyage_restauration
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_restauration_list
+msgid "المطاعم"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.actions.act_window,name:travel_pro_sahara.action_voyage_equipement
+#: model:ir.model,name:travel_pro_sahara.model_travel_pro_sahara_voyage_equipement
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__reservation_equipement_ids
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_voyage_equipement
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_equipement_list
+msgid "المعدات"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_client_form
+msgid "المعرف الجبائي"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_statistic_form
+msgid "الملخص المالي (بالدينار التونسي - د.ت)"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage_equipement__product_id
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_order_form_inherit_travel_v2
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_equipement_list
+msgid "المنتج"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_stock_product
+msgid "المنتجات"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_product_root
+msgid "المنتجات والخدمات"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.actions.act_window,name:travel_pro_sahara.action_vendor_travel
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_purchase_vendor
+msgid "الموردين"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_client_form
+msgid "الموقع الإلكتروني"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_client_form
+msgid "النشاط التجاري"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.actions.act_window,name:travel_pro_sahara.action_voyage_transport
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__reservation_transport_ids
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_statistic__total_transport
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_voyage_transport
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_transport_list
+msgid "النقل"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_sale_order__reservation_transport_ids_related
+msgid "النقل والارشاد"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage__type_voyage
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_order_form_inherit_travel_v2
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_passager_list
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_list
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_transport_list
+msgid "النوع"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_client_tree
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_guide_list
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_hotel_list
+msgid "الهاتف"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage__destination_ids
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_form
+msgid "الوجهات"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_jour_list
+msgid "الوجهة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_order_form_inherit_travel_v2
+msgid "الوسيلة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_order_form_inherit_travel_v2
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_jour_list
+msgid "الوصف"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_transport_list
+msgid "الوصول"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_transport_list
+msgid "اليوم"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+msgid "اليوم رقم"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.actions.act_window,name:travel_pro_sahara.action_voyage_jour
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__reservation_jour_ids
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_voyage_jour
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_caisse_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_jour_list
+msgid "اليومية"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields.selection,name:travel_pro_sahara.selection__travel_pro_sahara_reservation__mode_paiement__carte
+msgid "بطاقة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid ""
+"تأكد دائماً من صحة البيانات في الخطوات الأولى (الزبون والرحلة) لأنها ستنتقل "
+"آلياً لبقية النظام."
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_form
+msgid "تأكيد"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_caisse__filter_date_end
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage__date_fin
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_list
+msgid "تاريخ الانتهاء"
+msgstr ""
+
+#. module: travel_pro_sahara
+#. odoo-python
+#: code:addons/travel_pro_sahara/models/voyage.py:0
+msgid "تاريخ الانتهاء يجب أن يكون بعد تاريخ البدء."
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_caisse__filter_date_start
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage__date_debut
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_list
+msgid "تاريخ البدء"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__date_reservation
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_list
+msgid "تاريخ الحجز"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_order_form_inherit_travel_v2
+msgid "تاريخ العرض"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "تتبع الأرقام الحقيقية المتاحة في خزينة وكالتكم في أي لحظة."
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "تتبع جرد المشروبات، الهدايا، ومعدات الرحلات."
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_statistic_form
+msgid "تحديث كامل البيانات"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_account_payment_form_inherit_travel
+msgid "تحديد كمدفوع"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_form
+msgid "تحديد كمكتمل"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_graph
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_pivot
+msgid "تحليل الحجوزات"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_stock_analysis
+msgid "تحليل المخزون"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields.selection,name:travel_pro_sahara.selection__travel_pro_sahara_reservation__mode_paiement__virement
+msgid "تحويل بنكي"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "تحية الفريق"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_caisse__filter_partner_id
+msgid "تصفية الزبون"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_caisse_form
+msgid "تصفية السجل السريع"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_caisse__filter_journal_id
+msgid "تصفية اليومية"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_kanban
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_kanban
+msgid "تعديل"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_form
+msgid "تعليقات"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+msgid "تفاصيل الحجز"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_order_form_inherit_travel_v2
+msgid "تفاصيل العرض للزبون"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__is_paid
+msgid "تم الدفع"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__is_invoiced
+msgid "تمت الفوترة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "تنظيم مديونية الفنادق والمطاعم وشركات النقل."
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "تهانينا!"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields.selection,name:travel_pro_sahara.selection__travel_pro_sahara_voyage__type_voyage__culturel
+msgid "ثقافي"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_kanban
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_kanban
+msgid "حذف"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_hotel_list
+msgid "خروج"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_hotel_list
+msgid "دخول"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_journals
+msgid "دفاتر اليومية"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_caisse_form
+msgid "دفع جديد"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.actions.act_window,name:travel_pro_sahara.action_travel_pro_guide_v2
+#: model:ir.model,name:travel_pro_sahara.model_travel_pro_sahara_guide
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_guide
+msgid "دليل المستخدم"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "دليل المستخدم الكامل — Travel Pro"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "دليلك الشامل لإدارة وكالتك السياحية بأعلى المعايير الاحترافية"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields.selection,name:travel_pro_sahara.selection__travel_pro_sahara_voyage__type_voyage__religieux
+msgid "ديني"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_kanban
+msgid "راكب"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_caisse__solde_banque
+msgid "رصيد البنك"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_caisse__solde_especes
+msgid "رصيد النقدي"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_jour_list
+msgid "رقم اليوم"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_res_partner__numero_cin
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_res_users__numero_cin
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_client_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_client_tree
+msgid "رقم بطاقة التعريف"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_res_partner__numero_passport
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_res_users__numero_passport
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_client_form
+msgid "رقم جواز السفر"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage__prix_adulte
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_list
+msgid "سعر البالغ"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage__prix_enfant
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_form
+msgid "سعر الطفل"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_hotel_list
+msgid "سعر الليلة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_order_form_inherit_travel_v2
+msgid "سعر الوحدة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields.selection,name:travel_pro_sahara.selection__travel_pro_sahara_voyage__type_voyage__touristique
+msgid "سياحي"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_client_form
+msgid "شروط الدفع"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields.selection,name:travel_pro_sahara.selection__travel_pro_sahara_reservation__mode_paiement__cheque
+msgid "شيك"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_order_form_inherit_travel_v2
+msgid "طباعة عرض السعر"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__mode_paiement
+msgid "طريقة الدفع"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_purchase_order_bc
+msgid "طلبات الشراء"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__nombre_passagers
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+msgid "عدد الركاب"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_statistic__total_clients
+msgid "عدد الزبائن"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__invoice_count
+msgid "عدد الفواتير"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__quotation_count
+msgid "عدد عروض الأسعار"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.actions.act_window,name:travel_pro_sahara.action_quotations_travel_pro
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_quotation
+msgid "عروض أسعار"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__quotation_ids
+msgid "عروض الأسعار"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_product_category
+msgid "فئات الخدمات"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_client_form
+msgid "فئة الزبون"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_account_payment__force_paid
+msgid "فرض كمدفوع"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_customer_invoices
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_customer_invoices_client
+msgid "فواتير الزبائن"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_purchase_vendor_bill
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_vendor_bills
+msgid "فواتير الموردين"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_client
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_client_tree
+msgid "قائمة الزبائن"
+msgstr ""
+
+#. module: travel_pro_sahara
+#. odoo-python
+#: code:addons/travel_pro_sahara/models/reservation.py:0
+msgid "لا يوجد أي عنصر قابل للفواترة في هذا الحجز."
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid ""
+"لقد أكملت استعراض الدليل الشامل. تتمنى لكم شركتنا رحلات موفقة وإرادة قوية!"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.actions.act_window,name:travel_pro_sahara.action_statistic
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_statistic
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_statistic_form
+msgid "لوحة التحكم"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model,name:travel_pro_sahara.model_travel_pro_sahara_statistic
+msgid "لوحة التحكم والإحصائيات"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model,name:travel_pro_sahara.model_travel_pro_sahara_caisse
+msgid "لوحة معلومات الخزينة العامة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields.selection,name:travel_pro_sahara.selection__travel_pro_sahara_voyage__state__confirme
+msgid "مؤكد"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields.selection,name:travel_pro_sahara.selection__travel_pro_sahara_reservation__state__confirmee
+msgid "مؤكدة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "مبدأ عمل التطبيق"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_form
+msgid "مثال: سفاري كينيا 10 أيام..."
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_list
+msgid "مدفوع"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields.selection,name:travel_pro_sahara.selection__travel_pro_sahara_reservation__state__payee
+msgid "مدفوعة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "مراقبة الدفاتر اليومية وإعداد أسعار صرف العملات الصعبة."
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_order_form_inherit_travel_v2
+msgid "مرجع الحجز:"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields.selection,name:travel_pro_sahara.selection__travel_pro_sahara_reservation__state__brouillon
+#: model:ir.model.fields.selection,name:travel_pro_sahara.selection__travel_pro_sahara_voyage__state__brouillon
+msgid "مسودة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_move_form_travel_simplification
+msgid "معلومات أخرى"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_client_form
+msgid "معلومات الهوية"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_form
+msgid "معلومات عامة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_list
+msgid "مفوتر"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields.selection,name:travel_pro_sahara.selection__travel_pro_sahara_reservation__state__facturee
+msgid "مفوترة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage__lieu_depart
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_list
+msgid "مكان الانطلاق"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields.selection,name:travel_pro_sahara.selection__travel_pro_sahara_voyage__state__complet
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_form
+msgid "مكتمل"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_order_form_inherit_travel_v2
+msgid "مكونات باقة السفر"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_reservation__notes
+#: model:ir.model.fields,field_description:travel_pro_sahara.field_travel_pro_sahara_voyage__note
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_form
+msgid "ملاحظات"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_form
+msgid "ملاحظات حول هذه الرحلة..."
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+msgid "ملاحظات وتعليمات خاصة..."
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_order_form_inherit_travel_v2
+msgid "ملاحظات وشروط"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields.selection,name:travel_pro_sahara.selection__travel_pro_sahara_reservation__state__annulee
+msgid "ملغاة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields.selection,name:travel_pro_sahara.selection__travel_pro_sahara_voyage__state__annule
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_form
+msgid "ملغى"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_order_form_inherit_travel_v2
+msgid "من"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_statistic_form
+msgid "نظام الإدارة المتكامل والإحصائيات المالية المتقدمة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.model.fields.selection,name:travel_pro_sahara.selection__travel_pro_sahara_reservation__mode_paiement__especes
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_caisse_form
+msgid "نقداً"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_form
+msgid "نوع الرحلة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_reservation_form
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_voyage_restauration_list
+msgid "نوع الوجبة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid ""
+"هذا العصب الأساسي للوكالة، حيث يتم حجز الأماكن وربط المسافرين بالبرنامج "
+"السياحي."
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "هنا تثبت استلامك للمال وتحول الفاتورة إلى حالة \"مدفوعة\"."
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "هنا تضع تفاصيل رحلتك (الوجهات، الفنادق، سعر البالغ وسعر الطفل)."
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_client_form
+msgid "وثائق الهوية"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model:ir.ui.menu,name:travel_pro_sahara.menu_purchase_receipt
+msgid "وصولات الاستلام"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "⚠️ للخبراء المحاسبين: تتبع توازن القيود المحاسبية لكل عملية."
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "💡 ملاحظة هامة:"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "📍 المسار : تطبيق الحجوزات ⬅ زر [ جديد ]"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "📍 المسار : تطبيق الخزينة العامة"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "📍 المسار : تطبيق الرحلات ⬅ زر [ جديد ]"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "📍 المسار : تطبيق الزبائن ⬅ زر [ جديد ]"
+msgstr ""
+
+#. module: travel_pro_sahara
+#: model_terms:ir.ui.view,arch_db:travel_pro_sahara.view_guide_form
+msgid "📍 المسار : داخل الفاتورة ⬅ زر [ تسجيل الدفع ]"
+msgstr ""

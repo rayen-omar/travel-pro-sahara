@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api
+from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 
 
@@ -86,7 +86,7 @@ class TravelProSaharaVoyage(models.Model):
     def _check_dates(self):
         for record in self:
             if record.date_debut and record.date_fin and record.date_fin < record.date_debut:
-                raise ValidationError("تاريخ الانتهاء يجب أن يكون بعد تاريخ البدء.")
+                raise ValidationError(_("تاريخ الانتهاء يجب أن يكون بعد تاريخ البدء."))
 
     def action_confirmer(self):
         if self.reference in ("/", "New"):

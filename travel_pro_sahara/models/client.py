@@ -14,3 +14,4 @@ class ResPartner(models.Model):
     def _onchange_name_parts(self):
         if self.nom or self.prenom:
             self.name = " ".join(filter(None, [self.prenom or "", self.nom or ""])).strip()
+   

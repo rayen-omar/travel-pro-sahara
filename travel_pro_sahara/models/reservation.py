@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api
+from odoo import models, fields, api, _
 from odoo.exceptions import UserError
 
 
@@ -356,7 +356,7 @@ class TravelProSaharaReservation(models.Model):
                 invoice_lines.append((0, 0, invoice_line_vals))
         
         if not invoice_lines:
-            raise UserError("لا يوجد أي عنصر قابل للفواترة في هذا الحجز.")
+            raise UserError(_("لا يوجد أي عنصر قابل للفواترة في هذا الحجز."))
             
         journal_inv = self.env['account.journal'].search([('type', '=', 'sale')], limit=1)
         vals = {

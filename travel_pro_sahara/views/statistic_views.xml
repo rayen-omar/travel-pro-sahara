@@ -140,31 +140,31 @@
 
                         <!-- Ligne 1 : Compteurs Principaux -->
                         <div class="stat_cards_row">
-                            <div class="stat_card card_blue" onclick="document.querySelector('button[name=\'action_open_clients\']').click();">
+                            <div class="stat_card card_blue" onclick="var b=document.querySelector('button[name=\'action_open_clients\']'); if(b) b.click();">
                                 <div class="card_icon"><i class="fa fa-users text-primary"/></div>
                                 <div class="card_content">
                                     <span class="card_label">إجمالي الزبائن</span>
                                     <span class="card_value"><field name="total_clients"/></span>
                                 </div>
-                                <button name="action_open_clients" type="object" invisible="1"/>
+                                <button name="action_open_clients" type="object" class="d-none"/>
                             </div>
 
-                            <div class="stat_card card_green" onclick="document.querySelector('button[name=\'action_open_voyages\']').click();">
+                            <div class="stat_card card_green" onclick="var b=document.querySelector('button[name=\'action_open_voyages\']'); if(b) b.click();">
                                 <div class="card_icon"><i class="fa fa-plane text-success"/></div>
                                 <div class="card_content">
                                     <span class="card_label">الرحلات النشطة</span>
                                     <span class="card_value"><field name="total_voyages_actifs"/></span>
                                 </div>
-                                <button name="action_open_voyages" type="object" invisible="1"/>
+                                <button name="action_open_voyages" type="object" class="d-none"/>
                             </div>
 
-                            <div class="stat_card card_orange" onclick="document.querySelector('button[name=\'action_open_reservations\']').click();">
+                            <div class="stat_card card_orange" onclick="var b=document.querySelector('button[name=\'action_open_reservations\']'); if(b) b.click();">
                                 <div class="card_icon"><i class="fa fa-calendar-check-o text-warning"/></div>
                                 <div class="card_content">
                                     <span class="card_label">إجمالي الحجوزات</span>
                                     <span class="card_value"><field name="total_reservations"/></span>
                                 </div>
-                                <button name="action_open_reservations" type="object" invisible="1"/>
+                                <button name="action_open_reservations" type="object" class="d-none"/>
                             </div>
                         </div>
 
